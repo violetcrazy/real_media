@@ -1,0 +1,296 @@
+extends default.jade
+include element/mixin.jade
+
+block title
+    title Block page
+
+block js_header
+    script(type="text/javascript", src="asset/js/jquery.maphilight.js")
+    script(type="text/javascript", src="asset/js/jquery.flexslider-min.js")
+    script(type="text/javascript", src="asset/js/block-building.js")
+
+block content
+    div.block-search.search-home
+        include element/search.jade
+
+    +breadcrumbs(['Ho Chi Minh','VINHOMES CENTRAL PARK', 'BLOCK A'])
+
+    div.container
+        h2.title-block.title-page Block A
+        div.block-view-map
+            .header
+                a.line-icon.pull-left(href="")
+                    span.icon: img(src="asset/img/icon/ic-security.png")
+                    b Image View
+                a.line-icon.pull-left.active(href="")
+                    span.icon: img(src="asset/img/icon/ic-security.png")
+                    b Plan view
+                a.line-icon.pull-left(href="")
+                    span.icon: img(src="asset/img/icon/ic-security.png")
+                    b Building map
+                .clearfix
+
+            div.text-center.secction-building: .wrap-inner
+                div.body-building
+                    div.building-content
+                        table
+                            tr
+                                th
+                                - for (var k = 1 ; k <= 50 ; k ++){
+                                    td #{k}
+                                - }
+                            tr
+                                - for (var i = 1 ; i <= 20 ; i ++){
+                                    tr
+                                        th: span Floor #{i}
+
+                                        - for (var j = 1 ; j <= 50 ; j ++){
+                                            - var temp = Math.floor(Math.random() * 3)
+                                            td
+                                                if temp == 0
+                                                    span.aparment.available(data-id="id_#{j}", data-toggle="tooltip", data-placement="top", title="Tooltip on top")
+                                                else if temp == 1
+                                                    span.aparment.processing(data-id="id_#{j}", data-toggle="tooltip", data-placement="top", title="Tooltip on top")
+                                                else
+                                                    span.aparment.sold(data-id="id_#{j}", data-toggle="tooltip", data-placement="top", title="Tooltip on top")
+                                        - }
+                                -}
+            .footer-bar
+                div.text-center.entry
+                    span.item.Available Available
+                    span.item.Processing Processing
+                    span.item.Sold Sold
+
+        div.plant-gallery
+            div.list-project
+                div.flexslider.slider: ul.slides
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+
+        div.block-detail
+            .overview
+                .tab-custom
+                    .tr
+                        .th Overview
+                        .td
+                            div.line-icon.p
+                                span.icon: img(src="asset/img/icon/ic-security.png")
+                                |<b>Project: Vinhomes Central Park - Hochiminh City</b>
+                            div.row.layout-4
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>South East</b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>43.91 ha</b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>13,000 m<sup>2</sup></b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>20 blocks</b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Apartments: 360</b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Available: 237</b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Processing: 100</b>
+                                .col-xs-3
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Sold: 23</b>
+                            div.price.p
+                                div.line-icon.pull-left
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Price: </b>
+                                div.summary
+                                    |<b>Floor 1-10</b>: $100,000 - $200,000 <br>
+                                    |<b>Floor 11-25</b>: $200,000 - $500,000 <br>
+                                    |<b>Floor 26-36</b>: $500,000 - $1,000,000
+                                div.clearfix
+
+                            div.description
+                                div.short
+                                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                                div.long
+                                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                                div.more-link
+                                    a.link  [+More]
+                    .tr
+                        .th Property Types
+                        .td.clear-p
+                            div.row.layout-3
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Apartment
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Corner Apartments
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Officetel
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Duplex
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Penthouse
+                    .tr
+                        .th Views
+                        .td.clear-p
+                            div.row.layout-3
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |City view
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Park view
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Pool view
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Garden view
+                    .tr
+                        .th Utilities
+                        .td.clear-p
+                            div.row.layout-3
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Spa
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Playground
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Pet area
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Gym
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Restaurant
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Tennis Court
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Swimming pool
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Supermarket
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Walking Path
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Park
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Mall
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |BBQ
+                                div.col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |Golf Court
+
+
+
+        div.other-projects
+            h3.title-block Other project
+            div.list-project
+                div.flexslider.slider-other: ul.slides
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro1.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro2.png")
+                        h4.caption VINHOMES TIMES CITY
+                    li: a(href="")
+                        img(src="asset/img/data-example/other-pro3.png")
+                        h4.caption VINHOMES TIMES CITY

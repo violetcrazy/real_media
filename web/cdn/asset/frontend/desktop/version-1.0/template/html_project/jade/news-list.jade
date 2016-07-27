@@ -1,0 +1,73 @@
+extends user_template.jade
+
+block js_header
+    script(type="text/javascript", src="asset/js/jquery.flexslider-min.js")
+    script(type="text/javascript", src="asset/js/project.js")
+ 
+block content
+    div.row-section
+        div.container
+            h2.title-block POPULAR NEWS
+            div.list-style4
+                div.entry
+                    .item
+                        .thumbnail
+                            .img(style="background-image: url(asset/img/data-example/best-view1.png)")
+                        .summary
+                            h3.title The most expensive housing market is...
+                            div.entry
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, pharetra lectus hendrerit, pretium mauris. Duis lacinia tortor a urna accumsan, eget egestas felis fermentum.
+                    .item
+                        .thumbnail
+                            .img(style="background-image: url(asset/img/data-example/best-view2.png)")
+                        .summary
+                            h3.title Real estate today: Older buyers, more bathrooms
+                            div.entry
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, pharetra lectus hendrerit, pretium mauris...
+                    .item
+                        .thumbnail
+                            .img(style="background-image: url(asset/img/data-example/best-view3.png)")
+                        .summary
+                            h3.title Buy (or sell) your home ... without a real estate agent
+                            div.entry
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, pharetra lectus hendrerit, pretium mauris...
+                   .item
+                        .thumbnail
+                            .img(style="background-image: url(asset/img/data-example/best-view4.png)")
+                        .summary
+                            h3.title Cities with biggest rent hikes
+                            div.entry
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, pharetra lectus hendrerit, pretium mauris...
+                    .item
+                        .thumbnail
+                            .img(style="background-image: url(asset/img/data-example/best-view5.png)")
+                        .summary
+                            h3.title Where Millennials are buying homes
+                            div.entry
+                                |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, pharetra lectus hendrerit, pretium mauris...
+
+                div.link-more.text-right
+                    a(href="", class="link") See more
+        div.container
+            div.other-projects
+                h3.title-block OTHER CATEGORIES
+                div.list-project
+                    div.flexslider.slider-other: ul.slides
+                        li: a(href="")
+                            img(src="asset/img/data-example/other-pro1.png")
+                            h4.caption CATEGORY 1
+                        li: a(href="")
+                            img(src="asset/img/data-example/other-pro2.png")
+                            h4.caption CATEGORY 2
+                        li: a(href="")
+                            img(src="asset/img/data-example/other-pro3.png")
+                            h4.caption CATEGORY 3
+                        li: a(href="")
+                            img(src="asset/img/data-example/other-pro1.png")
+                            h4.caption CATEGORY 4
+                        li: a(href="")
+                            img(src="asset/img/data-example/other-pro2.png")
+                            h4.caption CATEGORY 5 
+                        li: a(href="")
+                            img(src="asset/img/data-example/other-pro2.png")
+                            h4.caption CATEGORY 6 

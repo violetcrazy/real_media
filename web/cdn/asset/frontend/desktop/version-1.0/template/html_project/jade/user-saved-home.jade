@@ -1,0 +1,257 @@
+extends user_template.jade
+block content
+    div.container.m-t-30.m-b-30
+        div.row
+            div.col-xs-3
+                div.entry-sidebar
+                    div.content-block.sidebar-user
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                        div.username DINH MANH C
+                        div.type-user User
+                        ul.menu-user.list-unstyled
+                            li: a(href="") Basic Info
+                            li: a.active(href="") Purchased Properties
+                            li: a(href="") Saved Homes
+                            li: a(href="") Saved Searchs
+                            li: a(href="") Messages
+                            li: a(href="") Settings
+
+            div.col-xs-9.single-user
+                +breadcrumbs(['User','PURCHASED PROPERTIES'])
+                h2.title-block.title-page PURCHASED PROPERTIES
+                div.des-title You added <b class="text-danger"> 5 </b> properties to Saved Homes. Showing <b class="text-danger"> 1-15.</b>
+                div.sort-wrap.m-t-20
+                    span.text-intro Sort by
+                    div.content-sort
+                        div.item
+                            - var data = ["15","15 results"]
+                            - var list = {30:{parent:"30 results"},45:{parent:"45 results"},60:{parent:"60 results"}}
+                            +customSelect(data,list)
+                        div.item
+                            - var data = ["1","Esta Recommened"]
+                            - var list = {2:{parent:"item"}}
+                            +customSelect(data,list)
+                        div.item
+                            - var data = ["Price","Price"]
+                            - var list = {2:{parent:"item"}}
+                            +customSelect(data,list)
+                        div.item
+                            - var data = ["project","Project Name"]
+                            - var list = {2:{parent:"item"}}
+                            +customSelect(data,list)
+                        .clearfix
+                div.list-style2
+                    div.wrap-list
+                        div.item
+                            div.thumbnail
+                                .favorite.active
+                                img(src="asset/img/data-example/search1.png", alt="")
+                            div.summary
+                                h3.title Vinhomes Times City-A7-88
+                                    div.price.line-icon
+                                        span.icon: img(src="asset/img/icon/ic-dola.png", alt="")
+                                        |300.000
+                                div.address
+                                    .line-icon
+                                        span.icon: img(src="asset/img/icon/ic-location-small.png", alt="")
+                                        |Dist. 2, HCMC
+                                div.properties-entry
+                                    div.row-box
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-floor-black.png", alt="")
+                                                |Floor 9st
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-size-black.png", alt="")
+                                                |50m2
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-bed-black.png", alt="")
+                                                |2 bedrooms
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-orientation-black.png", alt="")
+                                                |South East
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-sea-view-black.png", alt="")
+                                                |Sea view
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-bath-black.png", alt="")
+                                                |1 bathroom
+
+
+                                a.esta-button.btn More detail
+                                div.action-item
+                                    a.send-email-agent.line-icon(href="", data-title="Vinhomes Times City", data-toggle="modal", data-target="#email-agent",aria-hidden="true", data-dismiss="modal")
+                                        span.icon: img(src="asset/img/icon/ic-mail-grey.png", alt="")
+                                        |Email Agent
+                                    a.line-icon(href="")
+                                        span.icon: img(src="asset/img/icon/ic-trash-grey.png", alt="")
+                                        |Remove
+                            div.clearfix
+                            .settings-notify
+                                i.text-label.pull-left Notifications
+                                div.select.pull-left
+                                    - var data = ["","On"]
+                                    - var list = {0:{parent:"On"},1:{parent:"Off"}}
+                                    +customSelect(data,list)
+                                .clearfix
+                        div.item
+                            div.thumbnail
+                                .favorite.active
+                                img(src="asset/img/data-example/search1.png", alt="")
+                            div.summary
+                                h3.title Vinhomes Times City-A7-88
+                                    div.price.line-icon
+                                        span.icon: img(src="asset/img/icon/ic-dola.png", alt="")
+                                        |300.000
+                                div.address
+                                    .line-icon
+                                        span.icon: img(src="asset/img/icon/ic-location-small.png", alt="")
+                                        |Dist. 2, HCMC
+                                div.properties-entry
+                                    div.row-box
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-floor-black.png", alt="")
+                                                |Floor 9st
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-size-black.png", alt="")
+                                                |50m2
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-bed-black.png", alt="")
+                                                |2 bedrooms
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-orientation-black.png", alt="")
+                                                |South East
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-sea-view-black.png", alt="")
+                                                |Sea view
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-bath-black.png", alt="")
+                                                |1 bathroom
+
+
+                                a.esta-button.btn More detail
+                                div.action-item
+                                    a.send-email-agent.line-icon(href="", data-title="Vinhomes Times City", data-toggle="modal", data-target="#email-agent",aria-hidden="true", data-dismiss="modal")
+                                        span.icon: img(src="asset/img/icon/ic-mail-grey.png", alt="")
+                                        |Email Agent
+                                    a.line-icon(href="")
+                                        span.icon: img(src="asset/img/icon/ic-trash-grey.png", alt="")
+                                        |Remove
+                            div.clearfix
+                            .settings-notify
+                                i.text-label.pull-left Notifications
+                                div.select.pull-left
+                                    - var data = ["","On"]
+                                    - var list = {0:{parent:"On"},1:{parent:"Off"}}
+                                    +customSelect(data,list)
+                                .clearfix
+                        div.item
+                            div.thumbnail
+                                .favorite.active
+                                img(src="asset/img/data-example/search1.png", alt="")
+                            div.summary
+                                h3.title Vinhomes Times City-A7-88
+                                    div.price.line-icon
+                                        span.icon: img(src="asset/img/icon/ic-dola.png", alt="")
+                                        |300.000
+                                div.address
+                                    .line-icon
+                                        span.icon: img(src="asset/img/icon/ic-location-small.png", alt="")
+                                        |Dist. 2, HCMC
+                                div.properties-entry
+                                    div.row-box
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-floor-black.png", alt="")
+                                                |Floor 9st
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-size-black.png", alt="")
+                                                |50m2
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-bed-black.png", alt="")
+                                                |2 bedrooms
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-orientation-black.png", alt="")
+                                                |South East
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-sea-view-black.png", alt="")
+                                                |Sea view
+                                        div.col-xs-4
+                                            .line-icon
+                                                span.icon: img(src="asset/img/icon/ic-bath-black.png", alt="")
+                                                |1 bathroom
+
+
+                                a.esta-button.btn More detail
+                                div.action-item
+                                    a.send-email-agent.line-icon(href="", data-title="Vinhomes Times City", data-toggle="modal", data-target="#email-agent",aria-hidden="true", data-dismiss="modal")
+                                        span.icon: img(src="asset/img/icon/ic-mail-grey.png", alt="")
+                                        |Email Agent
+                                    a.line-icon(href="")
+                                        span.icon: img(src="asset/img/icon/ic-trash-grey.png", alt="")
+                                        |Remove
+                            div.clearfix
+                            .settings-notify
+                                i.text-label.pull-left Notifications
+                                div.select.pull-left
+                                    - var data = ["","On"]
+                                    - var list = {0:{parent:"On"},1:{parent:"Off"}}
+                                    +customSelect(data,list)
+                                .clearfix
+
+                    div.pagination
+                        .text-cout 1-15 of 1,438 Results
+                        ul.list-link.list-unstyled
+                            li: a.first(href="")
+                            li: a.item.active(href="") 1
+                            li: a.item(href="") 2
+                            li: a.item(href="") 3
+                            li: a.item(href="") 4
+                            li: a.item(href="") 5
+                            li: a.last(href="")
+
+    div(class="modal fade model-custom", id="email-agent", tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+        div(class="modal-dialog", role="document")
+            div(class="modal-content", style="width: 650px")
+                span.close-popup(aria-hidden="true", data-dismiss="modal")
+                div(class="modal-body")
+                    h3.title-model Contact this Agent
+                    form.form-horizontal.custom-from
+                        input(type="hidden", id="title_article")
+                        div.row
+                            div.col-xs-4
+                                div
+                                    div.text-label Name
+                                    input(type="email" class="form-control" id="frist-name" placeholder="Name")
+                            div.col-xs-4
+                                div
+                                    div.text-label Phone
+                                    input(type="email" class="form-control" id="frist-name" placeholder="Phone")
+                            div.col-xs-4
+                                div
+                                    div.text-label Email
+                                    input(type="email" class="form-control" id="frist-name" placeholder="Email")
+                        div.m-t-15
+                            div.text-label Send the message
+                            textarea.form-control(name="content", rows="5")
+                        .clearfix
+                        div.form-group.submit-button.text-center.m-t-20
+                            button.esta-button.btn.medium(type="submit") Ok
+                        div.text-center By sending, you agree to <b class="text-danger">Esta's Terms of Use </b> and <b class="text-danger">Privacy Policy</b>
+    script(src="asset/js/send-email-popup.js")

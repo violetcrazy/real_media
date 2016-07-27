@@ -1,0 +1,131 @@
+extends user_template.jade
+block content
+    div.container.m-t-30.m-b-30
+        div.single-user
+            h2.title-block.title-page FIND AGENT
+            div.des-title We found <b class="text-danger"> 100 </b> properties with availability. Showing <b class="text-danger"> 1-15.</b>
+            div.sort-wrap.m-t-20
+                span.text-intro Sort by
+                div.content-sort
+                    div.item
+                        - var data = ["15","15 results"]
+                        - var list = {30:{parent:"30 results"},45:{parent:"45 results"},60:{parent:"60 results"}}
+                        +customSelect(data,list)
+                    div.item
+                        - var data = ["1","Esta Recommened"]
+                        - var list = {2:{parent:"item"}}
+                        +customSelect(data,list)
+                    div.item
+                        - var data = ["","Location"]
+                        - var list = {2:{parent:"item"}}
+                        +customSelect(data,list)
+                    div.item
+                        - var data = ["","Rating"]
+                        - var list = {2:{parent:"item"}}
+                        +customSelect(data,list)
+                    .clearfix
+            div.list-style2.list-agent
+                div.wrap-list
+                    div.item
+                        div.thumbnail
+                            img(src="asset/img/data-example/agent2.gif", alt="")
+                        div.summary
+                            h3.title Nguyễn Văn A
+                            .line-icon
+                                span.icon: img(src="asset/img/icon/ic-phone.png", alt="")
+                                |+(84) 92 22 22 222
+                            .line-icon
+                                span.icon: img(src="asset/img/icon/ic_Apartment_20px.png", alt="")
+                                |20 Recent Sales
+
+                            a.esta-button.btn More detail
+                            
+                            a.m-l-15.esta-button.btn(data-title="Vinhomes Times City", data-toggle="modal", data-target="#email-agent",aria-hidden="true", data-dismiss="modal") Contact
+                            
+                            div.action-item
+                                span.text-rating Rating points
+                                span.value-rating 5.367
+                        div.clearfix
+                    
+                    div.item
+                        div.thumbnail
+                            img(src="asset/img/data-example/agent3.png", alt="")
+                        div.summary
+                            h3.title Nguyễn Văn A
+                            .line-icon
+                                span.icon: img(src="asset/img/icon/ic-phone.png", alt="")
+                                |+(84) 92 22 22 222
+                            .line-icon
+                                span.icon: img(src="asset/img/icon/ic_Apartment_20px.png", alt="")
+                                |20 Recent Sales
+
+                            a.esta-button.btn More detail
+                            
+                            a.m-l-15.esta-button.btn(data-title="Vinhomes Times City", data-toggle="modal", data-target="#email-agent",aria-hidden="true", data-dismiss="modal") Contact
+                            
+                            div.action-item
+                                span.text-rating Rating points
+                                span.value-rating 5.367
+                        div.clearfix
+                    
+                    div.item
+                        div.thumbnail
+                            img(src="asset/img/data-example/avatar.png", alt="")
+                        div.summary
+                            h3.title Nguyễn Văn A
+                            .line-icon
+                                span.icon: img(src="asset/img/icon/ic-phone.png", alt="")
+                                |+(84) 92 22 22 222
+                            .line-icon
+                                span.icon: img(src="asset/img/icon/ic_Apartment_20px.png", alt="")
+                                |20 Recent Sales
+
+                            a.esta-button.btn More detail
+                            
+                            a.m-l-15.esta-button.btn(data-title="Vinhomes Times City", data-toggle="modal", data-target="#email-agent",aria-hidden="true", data-dismiss="modal") Contact
+                            
+                            div.action-item
+                                span.text-rating Rating points
+                                span.value-rating 5.367
+                        div.clearfix
+
+                div.pagination
+                    .text-cout 1-15 of 1,438 Results
+                    ul.list-link.list-unstyled
+                        li: a.first(href="")
+                        li: a.item.active(href="") 1
+                        li: a.item(href="") 2
+                        li: a.item(href="") 3
+                        li: a.item(href="") 4
+                        li: a.item(href="") 5
+                        li: a.last(href="")
+
+    div(class="modal fade model-custom", id="email-agent", tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+        div(class="modal-dialog", role="document")
+            div(class="modal-content", style="width: 650px")
+                span.close-popup(aria-hidden="true", data-dismiss="modal")
+                div(class="modal-body")
+                    h3.title-model Contact this Agent
+                    form.form-horizontal.custom-from
+                        input(type="hidden", id="title_article")
+                        div.row
+                            div.col-xs-4
+                                div
+                                    div.text-label Name
+                                    input(type="email" class="form-control" id="frist-name" placeholder="Name")
+                            div.col-xs-4
+                                div
+                                    div.text-label Phone
+                                    input(type="email" class="form-control" id="frist-name" placeholder="Phone")
+                            div.col-xs-4
+                                div
+                                    div.text-label Email
+                                    input(type="email" class="form-control" id="frist-name" placeholder="Email")
+                        div.m-t-15
+                            div.text-label Send the message
+                            textarea.form-control(name="content", rows="5")
+                        .clearfix
+                        div.form-group.submit-button.text-center.m-t-20
+                            button.esta-button.btn.medium(type="submit") Ok
+                        div.text-center By sending, you agree to <b class="text-danger">Esta's Terms of Use </b> and <b class="text-danger">Privacy Policy</b>
+    script(src="asset/js/send-email-popup.js")

@@ -1,0 +1,24 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.main-content
+        h1.title-style1 Tin nhắn
+        div.hr.n-m-b
+        div.menu-mess
+            a.item(href="")
+                div.entry
+                    img.icon(src="asset/img/icon/ic-message-inbox.png", alt="")
+                    |Hộp thư đến
+            a.item(href="")
+                div.entry
+                    img.icon(src="asset/img/icon/ic-message-send.png", alt="")
+                    |Hộp thư đi
+            a.item(href="")
+                div.entry
+                    img.icon(src="asset/img/icon/ic-bin.png", alt="")
+                    |Thư đã xóa
+            a.item(href="")
+                div.entry
+                    img.icon(src="asset/img/icon/ic-message-setting.png", alt="")
+                    |Cài đặt

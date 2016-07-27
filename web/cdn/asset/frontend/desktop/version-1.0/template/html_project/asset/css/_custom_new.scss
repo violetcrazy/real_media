@@ -1,0 +1,572 @@
+// viet css dang SASS nhe.
+html{font-size:100% !important}
+body{font-weight:400;font-size:0.75rem}
+
+//font-size:0.75rem
+/* Footer */
+.footer-site{
+	font-size:12px;
+}
+.footer-site .address .des,
+.footer-site .phone{line-height:22px}
+
+.footer-site {
+	.footer-bottom {
+		.social {
+			a{
+				width: 40px;
+				padding:0 5px;
+			}
+		}
+		.copyright{
+			font-size: 12px;
+		}
+	}
+}
+
+
+/* HOME */
+.list-post1 {
+	.item.item-3 {
+			.caption{
+				font-size:14px;
+				//
+				.title-project{
+					font-size: 20px;
+					margin-bottom: 3px;
+					margin-top: 10px;
+				}
+				.action-bottom{
+					text-align:left;
+				}
+				.localtion{
+					font-size:16px;
+				}
+			}
+	}
+}
+
+.list-post1 .item .caption{
+	background:rgba(0, 0, 0, 0.8);
+}
+.list-post2 {
+	.item{
+		.caption{
+			background-color: rgba(0,0,0,0.7);
+			.price{
+				font-size: 16px;
+			}
+			.info-small{
+				.line-icon{
+					margin-right: 10px;
+    				padding-left: 17px;
+    				font-size: 0.75rem !important;
+				}
+			}
+		}
+	}
+}
+
+.action-bottom {
+	.btn{
+		margin:0;
+	}
+}
+
+.list-post2 {
+	.item:hover{
+		.caption{
+ 			background-color: rgba(170,26,39,0.8);
+
+		}
+	}
+}
+
+.line-icon {
+	padding:4px 0 4px 20px;font-weight:300;
+	.icon{
+		width: 12px;height:12px;
+	}
+}
+
+.col-xs-4 {
+	.line-icon{
+		.icon{
+			width: 14px;height:14px;
+		}
+	}
+}
+
+.list-post2 {
+	.counter{
+		.text{
+			font-size:25px;
+		}
+	}
+}
+
+.list-post1 {
+	.item{
+		.caption{
+			.action-bottom{
+				.link{
+					font-size: 0.75rem !important;
+					background-image: url("../img/next button.png");
+					background-repeat: none;
+					background-position: right center;
+					background-size: 8px 14px;
+					padding:10px 15px 10px 10px;
+				}
+			}
+		}
+	}
+}
+
+.link-more {
+	padding:10px 0;
+	.link{
+		font-size: 14px;
+		font-weight:400;
+		background-image: url("../img/link-d.png");
+		background-repeat: none;
+		background-position: right center;
+		background-size: 16px 9px;
+		padding-right:23px;
+	}
+}
+
+/* Buy and Rent */
+.title-block{
+	font-size:16px;margin-bottom:15px;
+}
+.row-section{
+	padding:25px 0;
+}
+.m-t-25 {
+	margin-top: 25px !important;
+}
+
+/* Project */
+.tab-custom {
+	.tr {
+		.th{
+			font-size: 14px;
+			width: 20%;
+		}
+	}
+}
+.p{margin-bottom:0px}
+.block-detail {
+	font-size:14px;padding-top:25px;
+	b{
+		font-weight:400;font-size:14px;
+	}
+}
+
+.more-link {
+	.link{
+		font-size:12px;
+		font-weight:400;
+	}
+}
+h4, .h4{font-size:14px}
+.other-projects {
+	.list-project {
+		.slides {
+			.caption{
+				background: rgba(0, 0, 0, 0.6)
+			}
+		}
+	}
+}
+.tab-custom .tr .th,
+.tab-custom .tr .td{ padding:15px 0 }
+
+.col-xs-4{
+	.line-icon{
+		// padding:4px 0 4px 25px;
+	}
+}
+.other-projects{}
+
+/* BLock */
+.block-view-map {
+	.footer-bar {
+		padding:10px;
+		.item::before{
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+}
+
+/* Apartment */
+.share-tool {
+	a.item-share{
+		padding-left: 10px;
+		img{
+			width: 30px;height:auto;
+		}
+	}
+
+}
+
+.entry-content {
+	.line-checkbox{
+		margin-bottom: 15px;
+	}
+}
+
+.line-checkbox{
+	.text{
+		font-weight: 300;
+		font-size: 14px;
+	}
+}
+.wrap-slider-big {
+	.price{
+	background:-webkit-linear-gradient(top,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0));
+    background:-moz-linear-gradient(top,rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0));
+    left:0;
+	top:0;
+	padding:10px 20px;
+	width:100%;
+	}
+	.caption{
+		background: rgba(0, 0, 0, 0.6)
+	}
+}
+
+.flexslider {
+	.flex-direction-nav {
+		a {
+			width: 10px;height:20px;top:55%;
+		}
+	}
+}
+
+.info-request{font-size:12px;}
+
+.tools-view-panorama {
+	.entry {
+		.caption {
+			background-size:30px 17px;
+			font-size:20px;
+		}
+	}
+}
+
+.tools-view-panorama{margin-bottom:25px;}
+
+.title-block-apartment{font-size:18px}
+
+.line-checkbox{
+	padding-left:30px;min-height:25px;
+	.mark {
+		height:20px;
+		width: 20px;
+	}
+}
+
+.entry-content{
+	padding-top:15px;
+	margin-bottom:20px;
+	.description{
+		padding-top:0;
+		.col-xs-4{
+			padding-left:0;
+			padding-top:0;
+		}
+	}
+	.layout-3{
+
+			margin-bottom:15px;
+
+	}
+	.line-checkbox {
+		margin-bottom: 5px;
+	}
+}
+
+
+.form-send-agent {
+	.title-form {
+		font-size:20px;
+	}
+}
+
+/* Search */
+.filter-multiple {
+	.custom-checkbox {
+		.text{
+			font-weight: 300;
+		}
+		.mark{
+			top: 8px;
+		}
+	}
+}
+
+.content-widget {
+	.title-filter {
+		font-size:14px;
+	}
+}
+
+.result-search {
+	.item {
+		.thumbnail {
+			width: 200px;
+			height: 200px;
+			.img {
+				width: 200px;
+				height: 200px;
+				background-size:200px 200px;
+			}
+		}
+		.summary{
+			padding-left:220px;
+		}
+	}
+}
+
+
+/* Find Agent */
+.result-search.list-agent .item .thumbnail,
+.list-style2.list-agent .item .thumbnail{
+	width:125px;
+	height:125px;
+}
+
+.result-search.list-agent .item .summary,
+.list-style2.list-agent .item .summary{
+	padding-left:135px;
+	padding-top:0;
+}
+
+.wrap-list {
+	.item:hover {
+		background:#fefefe;
+	}
+}
+
+.list-agent {
+	.item {
+		.summary {
+			.title {
+				font-size:18px;
+				font-weight: 400;
+			}
+		}
+	}
+}
+/* News */
+.list-style3 {
+	.item {
+		.caption{
+			width: 600px;
+			font-size: 28px;
+			background:url("../img/transparent-title.png") repeat-x;
+			width: 620px;
+			padding-right:40px;
+		}
+	}
+}
+
+.new1 {
+	.navigation {
+		.title{
+			font-size:14px;
+		}
+	}
+}
+
+.list-style4 {
+	.item:first-child {
+		.summary {
+			.title {
+				font-size:24px;
+			}
+		}
+	}
+}
+
+.list-style4 {
+	.wrap-content {
+		.title {
+			font-size:16px;
+			line-height: 20px;
+		}
+	}
+}
+
+.news-detail {
+	.title {
+		font-size:20px;
+		margin-top:0;
+	}
+}
+
+.sidebar-news-detail {
+	.item {
+		padding:10px 0;
+		.title{
+			font-size:16px;
+			padding-bottom:20px;
+		}
+	}
+}
+
+
+.list-style4 {
+	.item {
+		.summary{
+			.title{
+				font-size:20px;
+			}
+		}
+	}
+}
+
+/* Block */
+.block-detail{
+	.tab-custom{
+		.price{
+			.icon{
+				width: 10px;
+				height:10px;
+			}
+		}
+	}
+}
+
+.tab-custom {
+	.price {
+		.summary{
+			padding-left: 20px;
+   			padding-top: 4px;
+   			b {
+				margin-right: 10px;
+				display: inline-block;
+				min-width: 80px;
+			}
+		}
+	}
+}
+
+.tab-custom {
+	.price {
+		.pull-left{
+			b{ display:none}
+		}
+	}
+}
+
+/* Search */
+.result-search .item .summary .properties-entry .line-icon,
+.list-style2 .item .summary .properties-entry .line-icon{
+	padding:2px 0 2px 25px;
+}
+.result-search .item .summary .row-box, .list-style2 .item .summary .row-box{
+	margin-left:-10px;
+}
+.result-search .item .line-price, .list-style2 .item .line-price{
+	font-size:20px;
+}
+.result-search {
+	.line-price {
+		margin-top:8px;
+		.icon{
+			top:-1px;
+			width: 10px;
+			height: 10px;
+		}
+	}
+}
+
+/* User */
+.entry-sidebar {
+	.content-block {
+		.username{
+			padding:10px 0
+		}
+	}
+}
+.menu-user{
+	border-top:1px solid #cecfcf;
+	a{
+		font-size:14px;
+		font-weight:300;
+		padding:8px 15px;
+
+	}
+}
+
+.menu-user a:hover{
+	background-color: #a71a27;
+    border-color: #a71a27;
+    color: #fff;
+    font-weight: bold;
+}
+
+.single-user {
+	.breadcrumbs{
+		padding-bottom:10px;
+	}
+	.tools-mess{
+		background: #f6f6f6 none repeat scroll 0 0;
+	    border: 1px solid #cecfcf;
+	    margin-bottom:10px !important;
+	    padding: 10px 5px 7px;
+		.pull-right{
+			border:0;padding-right:0;
+		}
+		.icon{
+			bottom:0;
+			width:auto;
+			height:12px;
+			top:-2px;
+		}
+
+		.line-icon{
+			border-right:1px solid #cecfcf;
+			padding-right:20px;
+			font-weight:500
+		}
+	}
+}
+
+
+
+/* Genaral */
+.breadcrumbs {
+	a {
+		font-size:12px;
+	}
+}
+.breadcrumbs {
+	.container{
+	}
+}
+.pagination .first,.pagination li .item ,.pagination .last{
+	min-width: 20px;
+	width: 25px;
+	height:25px;
+}
+
+.pagination {
+	li {
+		.item {
+			padding:0 !important;
+			line-height: 25px;
+		}
+		.item:hover {
+			color: #a71a27;
+			background:#ccc;
+		}
+	}
+}
+
+
+

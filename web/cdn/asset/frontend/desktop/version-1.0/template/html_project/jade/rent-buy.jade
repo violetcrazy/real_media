@@ -1,0 +1,225 @@
+extends default.jade
+include element/mixin.jade
+
+block title
+    title Home page title
+
+block js_header
+    script(type="text/javascript", src="asset/js/jquery.nivo.slider.js")
+
+block content
+    div.search-home.block-search
+        include element/search.jade
+
+    div.row-section.odd.m-t-25
+        div.container
+            h2.title-block POPULAR APARTMENTS
+            div.list-post2
+                div.row-2
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.clearfix
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view5.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+    div.row-section
+        div.container
+            h2.title-block NEW LISTINGS
+            div.list-post2
+                div.row-2
+                    div.item.item2-2
+                        +itemBestView('asset/img/data-example/item-2-2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+
+    div.row-section.odd
+        div.container
+            h2.title-block best view
+            div.list-post2
+                div.row-2
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.clearfix
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view5.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+
+    div.row-section
+        div.container
+            div.banner-random.m-b-50
+                a(href=""): img(src="asset/img/banner/banner-full.png", alt="")
+
+            h2.title-block UNDER $200,000
+            div.list-post2
+                div.row-2
+                    div.item.item1-2
+                        +itemBestView('asset/img/data-example/under1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under4.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under5.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+    div.row-section.odd
+        div.container
+            h2.title-block FURNISHED APARTMENTS
+            div.list-post2
+                div.row-2
+                    div.item.item2-2
+                        +itemBestView('asset/img/data-example/item-2-2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+
+    div.row-section
+        div.container
+            div.banner-random.m-b-50
+                a(href=""): img(src="asset/img/banner/banner-full-1.png", alt="")
+
+            h2.title-block UNFURNISHED APARTMENTS
+            div.list-post2
+                div.row-2
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.clearfix
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view5.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+    div.row-section.odd
+        div.container
+            h2.title-block PENTHOUSES
+            div.list-post2
+                div.row-2
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.clearfix
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view5.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+
+
+    div.row-section
+        div.container
+            div.banner-random.m-b-50
+                a(href=""): img(src="asset/img/banner/banner-full-2.png", alt="")
+
+            h2.title-block VILLAS
+            div.list-post2
+                div.row-2
+                    div.item.item2-2
+                        +itemBestView('asset/img/data-example/item-2-2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+
+
+
+
+
+
+
+
+
+
+
+

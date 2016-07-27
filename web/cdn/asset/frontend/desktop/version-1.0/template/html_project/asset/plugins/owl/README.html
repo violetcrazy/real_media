@@ -1,0 +1,111 @@
+<p><a href="http://waffle.io/smashingboxes/OwlCarousel2"><img src="https://badge.waffle.io/smashingboxes/OwlCarousel2.png?label=ready&amp;title=Ready" alt="Stories in Ready"></a>
+<a href="https://travis-ci.org/smashingboxes/OwlCarousel2"><img src="https://travis-ci.org/smashingboxes/OwlCarousel2.svg" alt="Build Status"></a></p>
+<h2 id="announcement-">Announcement.</h2>
+<p>Big announcement comming about maintainance of this project.  Stay tuned!</p>
+<h2 id="owl-carousel-2-beta">Owl Carousel 2 Beta</h2>
+<p>Touch enabled <a href="http://jquery.com/">jQuery</a> plugin that lets you createbeautiful responsive carousel slider. <strong>To get started, check out <a href="http://owlcarousel.owlgraphic.com">http://owlcarousel.owlgraphic.com</a>.</strong></p>
+<p>Please consider that the project is still in beta. The current status of the milestones can be found <a href="https://github.com/OwlFonk/OwlCarousel2/milestones">here</a>. If you want to use the <a href="https://github.com/OwlFonk/OwlCarousel2/archive/develop.zip">latest development</a> see <a href="#building">building</a>.</p>
+<h2 id="quick-start">Quick start</h2>
+<p>Download the <a href="http://owlcarousel.owlgraphic.com/download/owl.carousel.zip">latest release</a> and put the required stylesheet at the <a href="https://developer.yahoo.com/performance/rules.html#css_top">top</a> of your markup:</p>
+<pre><code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;owlcarousel/owl.carousel.min.css&quot; /&gt;
+</code></pre>
+<p>Put the script at the <a href="https://developer.yahoo.com/performance/rules.html#js_bottom">bottom</a> of your markup right after jQuery:</p>
+<pre><code class="lang-html">&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;owlcarousel/owl.carousel.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>Wrap your items (<code>div</code>, <code>a</code>, <code>img</code>, <code>span</code>, <code>li</code> etc.) with a container element (<code>div</code>, <code>ul</code> etc.). Only the class <code>owl-carousel</code> is mandatory to apply proper styles:</p>
+<pre><code class="lang-html">&lt;div class=&quot;owl-carousel&quot;&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+  &lt;div&gt; Your Content &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Call the <a href="http://learn.jquery.com/plugins/">plugin</a> function and your carousel is ready.</p>
+<pre><code class="lang-javascript">$(document).ready(function(){
+  $(&#39;.owl-carousel&#39;).owlCarousel();
+});
+</code></pre>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation, included in this repo in the root directory, is built with <a href="http://assemble.io/">Assemble</a> and publicly available at <a href="http://owlcarousel.owlgraphic.com">http://owlcarousel.owlgraphic.com</a>. The documentation may also be run locally.</p>
+<h2 id="building">Building</h2>
+<p>This package comes with <a href="http://gruntjs.com/">Grunt</a> and <a href="http://bower.io/">Bower</a>. The following tasks are available:</p>
+<ul>
+<li><code>default</code> compiles the CSS and JS into <code>/dist</code> and builds the doc.</li>
+<li><code>dist</code> compiles the CSS and JS into <code>/dist</code> only.</li>
+<li><code>watch</code> watches source files and builds them automatically whenever you save.</li>
+<li><code>test</code> runs <a href="http://www.jshint.com/">JSHint</a> and <a href="http://qunitjs.com/">QUnit</a> tests headlessly in <a href="http://phantomjs.org/">PhantomJS</a>.</li>
+</ul>
+<p>To define which plugins are build into the distribution just edit <code>/_config.json</code> to fit your needs.</p>
+<h2 id="contributing">Contributing</h2>
+<p>The <a href="https://github.com/OwlFonk/OwlCarousel2/issues">issue tracker</a> is the preferred channel for bug reports, features requests and submitting pull requests.</p>
+<p><strong>Please do not use the issue tracker for personal support requests. Stack Overflow (<a href="http://stackoverflow.com/questions/tagged/owl-carousel"><code>owl-carousel</code></a>) is a better place to get help.</strong></p>
+<h3 id="bug-reports">Bug reports</h3>
+<p>A bug is a <strong>demonstrable problem</strong> that is caused by the code in the repository. Good bug reports are extremely helpful, so thanks!</p>
+<p>Guidelines for bug reports:</p>
+<ol>
+<li><p>Use the GitHub issue search — check if the issue has already been reported.</p>
+</li>
+<li><p>Check if the issue has been fixed — try to reproduce it using the latest <code>develop</code> branch in the repository.</p>
+</li>
+<li><p>Isolate the problem — ideally create a reduced test case and a live example. This <a href="http://jsfiddle.net/eqbL6vLb/">JSFiddle</a> and this <a href="http://jsbin.com/xuxozu/1">JS Bin</a> are helpful templates you can fork or clone.</p>
+</li>
+</ol>
+<p>Example:</p>
+<blockquote>
+<p>Short and descriptive example bug report title</p>
+<p>A summary of the issue and the browser/OS environment in which it occurs. If suitable, include the steps required to reproduce the bug.</p>
+<ol>
+<li>This is the first step</li>
+<li>This is the second step</li>
+<li>Further steps, etc.</li>
+</ol>
+<p><code>&lt;url&gt;</code> - a link to the reduced test case</p>
+<p>Any other information you want to share that is relevant to the issue being reported. This might include the lines of code that you have identified as causing the bug, and potential solutions (and your opinions on their merits).</p>
+</blockquote>
+<h3 id="feature-requests">Feature requests</h3>
+<p>Feature requests are welcome. But take a moment to find out whether your idea fits with the scope and aims of the project. It&#39;s up to you to make a strong case to convince the project&#39;s developers of the merits of this feature. Please provide as much detail and context as possible.</p>
+<h3 id="pull-requests">Pull requests</h3>
+<p>Good pull requests are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.</p>
+<p><strong>Please ask first</strong> before embarking on any significant pull request (e.g. implementing features, refactoring code, porting to a different language), otherwise you risk spending a lot of time working on something that the project&#39;s developers might not want to merge into the project.</p>
+<p>Adhering to the following process is the best way to get your work included in the project:</p>
+<ol>
+<li><p><a href="http://help.github.com/fork-a-repo/">Fork</a> the project, clone your fork, and configure the remotes:</p>
+<pre><code class="lang-bash">git clone https://github.com/&lt;your-username&gt;/OwlCarousel2.git
+cd OwlCarousel2
+git remote add upstream https://github.com/OwlFonk/OwlCarousel2.git
+</code></pre>
+</li>
+<li><p>If you cloned a while ago, get the latest changes from upstream:</p>
+<pre><code class="lang-bash">git checkout develop
+git pull [--rebase] upstream develop
+</code></pre>
+</li>
+<li><p>Create a new topic branch (off the main project <code>develop</code> branch) to contain your feature, change, or fix:</p>
+<pre><code class="lang-bash">git checkout -b &lt;topic-branch-name&gt;
+</code></pre>
+</li>
+<li><p>Build the distribution before committing to ensure your changes follow the coding standards and all build files are up to date.</p>
+<pre><code class="lang-bash">grunt dist
+</code></pre>
+</li>
+<li><p>Commit your changes in logical chunks. Please adhere to these <a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">guidelines</a>. Use Git&#39;s <a href="https://help.github.com/articles/interactive-rebase">interactive rebase</a> feature to tidy up your commits before making them public.</p>
+</li>
+<li><p>Locally merge (or rebase) the upstream development branch into your topic branch:</p>
+<pre><code class="lang-bash">git pull [--rebase] upstream develop
+</code></pre>
+</li>
+<li><p>Push your topic branch up to your fork:</p>
+<pre><code class="lang-bash">git push origin &lt;topic-branch-name&gt;
+</code></pre>
+</li>
+<li><p><a href="https://help.github.com/articles/using-pull-requests/">Open a Pull Request</a> with a clear title and description against the <code>develop</code> branch.</p>
+</li>
+</ol>
+<p><strong>By submitting a patch, you agree to allow the project owner to
+license your work under the terms of the <a href="LICENSE">MIT License</a>.</strong></p>
+<h2 id="license">License</h2>
+<p>The code and the documentation are released under the <a href="LICENSE">MIT License</a>.</p>

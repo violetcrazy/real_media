@@ -1,0 +1,32 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.block-header-tab.layout-2
+        a.active.item Kết quả
+        a.item(href="search-filter.html") Bộ lọc
+        div.clearfix
+    div.wrap-list
+        div.block-inner1
+            h1.title-style1 SEARCH RESULTS
+                div.des-title We found 100 properties with availability.
+
+        div.list-style3
+            div.entry
+                .item
+                    +entryStyle3('p1.jpg')
+                .item
+                    +entryStyle3('p2.jpg')
+                .item
+                    +entryStyle3('p3.jpg')
+                .item
+                    +entryStyle3('p4.jpg')
+                .item
+                    +entryStyle3('p1.jpg')
+                .item
+                    +entryStyle3('p2.jpg')
+                .item
+                    +entryStyle3('p3.jpg')
+
+            div.link-more.text-right
+                a(href="", class="link") See more

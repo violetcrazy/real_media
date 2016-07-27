@@ -1,0 +1,168 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block js_header
+    script(type="text/javascript", src="asset/js/swiper.js")
+    script(type="text/javascript", src="asset/js/project.js")
+
+block content
+    div.project-single
+        h1.title-style1.m-t-15.text-center Tên Project
+        div.thumbnail-project.thumbnail-custom
+            +thumbBg('p1.jpg')
+            div.caption
+                a.esta-button(href="search-block.html") Xem căn hộ
+
+        div.slides-project.custom-swiper
+            div(class="swiper-container")
+                div(class="swiper-wrapper")
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p1.jpg')
+                            .caption
+                                h3.title Lorem ipsum dolor.
+                                div.des Lorem ipsum dolor. Lorem ipsum dolor.
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p1.jpg')
+                            .caption
+                                h3.title Lorem ipsum dolor.
+                                div.des Lorem ipsum dolor. Lorem ipsum dolor.
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p1.jpg')
+                            .caption
+                                h3.title Lorem ipsum dolor.
+                                div.des Lorem ipsum dolor. Lorem ipsum dolor.
+
+                div(class="swiper-button-prev")
+                div(class="swiper-button-next")
+
+        div.main-content
+            h3.title-style1 Tổng quan
+            div.address-line  458 Minh Khai St. and 25 Lane 13, Mai Dong Ward, Hoang Mai Dist., Hanoi
+            div.block-property-single.layout-3-col.m-t-10
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |50m<sup>2</sup>
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |Lầu thứ 9
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Hướng biển
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |2 Phòng ngủ
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-orientation-black.png", alt="")
+                    |Đông bắc
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bath-black.png", alt="")
+                    |2 Phòng tắm
+                div.clearfix
+            div.description.m-t-10
+                div.short
+                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                div.long
+                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                    |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                div.more-link
+                    a.link  [+Xem thêm]
+            div.hr
+
+            h3.title-style1 Kiểu dự án
+            div.block-property-single.layout-2-col
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |Căn hộ
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |Thông tầng
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Văn phòng
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |Biệt thự
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-orientation-black.png", alt="")
+                    |Biệt thự trên không
+                div.clearfix
+            div.hr
+
+            h3.title-style1 Hướng bacol
+            div.block-property-single.layout-2-col
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |Thành phố
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |Hướng biển
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Văn phòng
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |Biệt thự
+                div.clearfix
+            div.hr
+            h3.title-style1 Tiện ích
+            div.block-property-single.layout-2-col
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |Sân băng trong nhà
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |VINKE
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Rạp chiếu phim
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |Sảnh Lounge
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |Club – House 5 sao
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |Nhà sinh hoạt
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Trường liên cấp
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |Bể bơi
+                div.clearfix
+            div.hr
+
+            h3.title-style1 Dự án khác
+            div.slides-project-other.custom-swiper.row-main
+                div(class="swiper-container")
+                    div(class="swiper-wrapper")
+                        div(class="swiper-slide")
+                            div.entry
+                                div.thumbnail-custom
+                                    +thumbBg('p1.jpg')
+                                .caption
+                                    h3.title Lorem ipsum dolor.
+                        div(class="swiper-slide")
+                            div.entry
+                                div.thumbnail-custom
+                                    +thumbBg('p1.jpg')
+                                .caption
+                                    h3.title Lorem ipsum dolor.
+                        div(class="swiper-slide")
+                            div.entry
+                                div.thumbnail-custom
+                                    +thumbBg('p1.jpg')
+                                .caption
+                                    h3.title Lorem ipsum dolor.
+
+                    div(class="swiper-button-prev")
+                    div(class="swiper-button-next")

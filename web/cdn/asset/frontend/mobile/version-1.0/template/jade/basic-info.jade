@@ -1,0 +1,36 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.main-content
+        h2.title-style1 Thông tin cơ bản
+        div.basic-info
+            h3.user-name Dat Nguyen
+                span.des-inline (Joined Sep 21, 2015)
+            div.line-info
+                span.text-label Password:
+                span.value ********
+            div.line-info
+                span.text-label Ngày sinh:
+                span.value 24/12/2015
+            div.line-info
+                span.text-label Email:
+                span.value example@example.com
+            div.line-info
+                span.text-label Điện thoại:
+                span.value 01256 586 355
+            div.line-info
+                span.text-label Địa chỉ:
+                span.value Số nhà tên đường, phường, quận, tỉnh
+            div.line-info
+                span.text-label Quốc tịch
+                span.value Việt Nam
+            div.line-info
+                span.text-label Công việc
+                span.value Sinh viên
+            div.hr
+            div.des-user
+                |Your Application Information is only shared with landlords and real estate agents who you contact, and will not be shown on your public profile.
+        div.action-bottom.m-t-15.m-b-20
+            a.link-action.esta-button.dis.block.btn-small.text-center(href="") Sửa
+        div.clearfix

@@ -1,0 +1,186 @@
+extends user_template.jade
+
+block js_header
+    script(type="text/javascript", src="asset/js/jquery.flexslider-min.js")
+    script(type="text/javascript", src="asset/js/apartment.js")
+
+block content
+    div.container.m-t-30.m-b-30
+        div.row
+            div.col-xs-3
+                div.entry-sidebar
+                    div.content-block.sidebar-user
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                        div.username DINH MANH C
+                        div.type-user User
+                        ul.menu-user.list-unstyled
+                            li: a(href="") Basic Info
+                            li: a(href="") Purchased Properties
+                            li: a(href="") Saved Homes
+                            li: a(href="") Saved Searchs
+                            li: a(href="") Messages
+                            li: a.active(href="") Settings
+
+            div.col-xs-9.single-user
+                +breadcrumbs(['USER','PURCHASED PROPERTIES', 'KIEN GIANG', 'VINPEARL PREMIUM PHU QUOC', 'A4-07'])
+
+                h1.title-block BEACH VILLA A4-07
+
+                div.block-view-map
+                    .header
+                        a.line-icon.pull-left.active(href="")
+                            span.icon: img(src="asset/img/ic-view-method/ic_3D furniture_red_20px-01.png")
+                            b 3D Furniture
+                        a.line-icon.pull-left(href="")
+                            span.icon: img(src="asset/img/ic-view-method/ic_building map_20px-03.png")
+                            b Building view
+                        a.line-icon.pull-left(href="")
+                            span.icon: img(src="asset/img/ic-view-method/ic_Plan View_20px.png")
+                            b Plan map
+                        .clearfix
+                    div.body-slider: .apartment-slider
+                        div.wrap-slider-big
+                            div.price $ 850,000
+                            div.caption
+                                .pull-left
+                                    label.line.active#modern
+                                        span.text Modern
+                                        span.mark
+                                        span.price-item $ 1,500-$ 2,500
+                                    label.line#contemporaty
+                                        span.text Contemporaty
+                                        span.mark
+                                        span.price-item $ 1,500-$ 2,500
+                                    label.line#classic
+                                        span.text Classic
+                                        span.mark
+                                        span.price-item $ 1,500-$ 2,500
+                                .pull-right
+                                    div.info-contact
+                                        div.image-logo
+                                            img(src="http://placehold.it/80")
+                                        div.info
+                                            p.text
+                                                |Furnished by <br>
+                                                b Furniture Company A
+                                            a Click here to contact >>
+                                .clearfix
+                            #slider.flexslider
+                                ul.slides
+                                    li: span.entry: img(src="asset/img/data-example/apartment1.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment2.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment3.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment4.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment5.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment6.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment7.png")
+                        #carousel.flexslider
+                            ul.slides
+                                li: span.entry: img(src="asset/img/data-example/apartment1.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment2.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment3.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment4.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment5.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment6.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment7.png")
+
+                div.apartment-detail
+                    div.m-t-60
+                    div.title-block-apartment Overview
+                    div.entry-content.p-b-4
+                        div.row.layout-3
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>South East</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>43.91 ha</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>13,000 m<sup>2</sup></b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>20 blocks</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Apartments: 360</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Available: 237</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Processing: 100</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Sold: 23</b>
+                        div.description
+                            div.short
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                            div.long
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                            div.more-link
+                                a.link  [+More]
+
+                    .entry-content.n-p-t.p-b-4
+
+                        h3.title-form Building Progress
+
+                        div.progress-bar-custom
+                            div.title-progress 4/6 months
+                            div.progress
+                                div.progress-bar(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%")
+                                    span.text 60%
+                                span.text-parent 100%
+                        div.des
+                            |Starting day: 01/05/2015 <br>
+                            |Expected completion time: 1/06/2016
+                        div.m-t-50
+                        h3.title-form Payment Progress
+
+                        div.progress-bar-custom
+                            div.title-progress $200,000/$300.000
+                            div.progress
+                                div.progress-bar(role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%")
+                                    span.text 60%
+                                span.text-parent 100%
+                        div.des
+                            |Starting day: 01/05/2015 <br>
+                            |Expected completion time: 1/06/2016
+
+                    .entry-content.n-p-t
+
+                        h3.title-form My Agent
+
+                        div.block-user-info
+                            div.avatar
+                                img(src="asset/img/data-example/avatar.png", alt="")
+                            div.summary
+                                div.entry
+                                    h2.name DINH MANH C
+                                    div.row
+                                        div.col-xs-6
+                                            div.intro-agent
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-mail.png")
+                                                    |agent12345@gmail.com
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-phone.png")
+                                                    |+(84) 92 22 22 222
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-home-black.png")
+                                                    |20 Recent Sales
+                                        div.col-xs-6
+                                            b.title.text-danger Professional (5 years experience)
+                                            div.des Lorem ipsum dolor sit amet, consectetur adipiscing elit. amet, consectetur adipiscing elit.

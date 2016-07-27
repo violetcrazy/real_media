@@ -1,0 +1,91 @@
+extends user_template.jade
+block content
+    div.container.m-t-30.m-b-30
+        div.row
+            div.col-xs-3
+                div.entry-sidebar
+                    div.content-block.sidebar-user
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                        div.username DINH MANH C
+                        div.type-user User
+                        ul.menu-user.list-unstyled
+                            li: a(href="") Basic Info
+                            li: a.active(href="") Purchased Properties
+                            li: a(href="") Saved Homes
+                            li: a(href="") Saved Searchs
+                            li: a(href="") Messages
+                            li: a(href="") Settings
+
+            div.col-xs-9.single-user
+                +breadcrumbs(['User','PURCHASED PROPERTIES'])
+                h2.title-block.title-page PURCHASED PROPERTIES
+                div.des-title You saved <b class="text-danger"> 5 </b> search <b class="text-danger">Saved Searches</b>. Showing<b class="text-danger"> 1-15.</b>
+
+                div.table-content2.m-t-30: table
+                    thead
+                        th.frist Search
+                        th(width="110px") Created
+                        th(width="110px") Notifications
+                        th.text-center(width="65px"): img(src="asset/img/icon/ic-trash-black.png", alt="")
+                    tbody
+                        tr
+                            td.frist
+                                div.title-entry Saved Search 20/11/2014
+                                div.des-entry Newbury Park, All homes for sale, All prices, Town home
+                            td 20/11/2014
+                            td
+                                - var data = ["","Daily"]
+                                - var list = {0:{parent:"Daily"},1:{parent:"Monthly"}}
+                                +customSelect(data,list)
+                            td.text-center
+                                +customCheckbox({id: 'fdl', text: ''})
+                        tr
+                            td.frist
+                                div.title-entry Saved Search 20/11/2014
+                                div.des-entry Newbury Park, All homes for sale, All prices, Town home
+                            td 20/11/2014
+                            td
+                                - var data = ["","Daily"]
+                                - var list = {0:{parent:"Daily"},1:{parent:"Monthly"}}
+                                +customSelect(data,list)
+                            td.text-center
+                                +customCheckbox({id: 'fdl', text: ''})
+                        tr
+                            td.frist
+                                div.title-entry Saved Search 20/11/2014
+                                div.des-entry Newbury Park, All homes for sale, All prices, Town home
+                            td 20/11/2014
+                            td
+                                - var data = ["","Daily"]
+                                - var list = {0:{parent:"Daily"},1:{parent:"Monthly"}}
+                                +customSelect(data,list)
+                            td.text-center
+                                +customCheckbox({id: 'fdl', text: ''})
+                        tr
+                            td.frist
+                                div.title-entry Saved Search 20/11/2014
+                                div.des-entry Newbury Park, All homes for sale, All prices, Town home
+                            td 20/11/2014
+                            td
+                                - var data = ["","Daily"]
+                                - var list = {0:{parent:"Daily"},1:{parent:"Monthly"}}
+                                +customSelect(data,list)
+                            td.text-center
+                                +customCheckbox({id: 'fdl', text: ''})
+                        tr
+                            td.frist
+                                div.title-entry Saved Search 20/11/2014
+                                div.des-entry Newbury Park, All homes for sale, All prices, Town home
+                            td 20/11/2014
+                            td
+                                - var data = ["","Daily"]
+                                - var list = {0:{parent:"Daily"},1:{parent:"Monthly"}}
+                                +customSelect(data,list)
+                            td.text-center
+                                +customCheckbox({id: 'fdl', text: ''})
+
+                div.text-center.m-t-30
+                    a.btn.esta-button(href="") Save
+                    |&#160 &#160 &#160
+                    a.btn.esta-button.dis(href="") Cancel

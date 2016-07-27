@@ -1,0 +1,198 @@
+extends default.jade
+include element/mixin.jade
+
+block title
+    title Home page title
+
+block js_header
+    script(type="text/javascript", src="asset/js/jquery.nivo.slider.js")
+
+block content
+    div.slider-section
+        div.wrap-slide.slider-home.text-center
+            a(href=""): img(src="asset/img/banner/home-banner-1.png", alt="")
+            a(href=""): img(src="asset/img/banner/home-banner-2.png", alt="")
+
+        div.search-home.block-search
+            include element/search.jade
+
+    div.row-section
+        div.container
+            h2.title-block Project
+            div.list-post1
+                div.item.item-3
+                    div.entry
+                        div.image-item
+                            .flash-info
+                                span.text-top Located on One of the best
+                                span.score 10
+                                span.text-bottom beaches of the world
+                            .caption.col-xs-4
+                                    .entry2
+                                        div.key-sale Text key sale text key sale Text key sale text key sale
+                                        h3.title-project Vinhomes C
+                                        div.localtion Nha Trang - Khánh Hòa
+                                        div.action-bottom.text-center
+                                            a.btn.esta-button Xem chi tiết
+                            .thumbnail-block
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/home1.png)")
+                                    img(src="asset/img/data-example/home1.png")
+
+                div.row
+                    div.item.item-2.col-xs-8
+                        div.entry
+                            div.image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/item-2.png)")
+                                    img(src="background: url(asset/img/data-example/item-2.png)")
+                                .name-project
+                                    h3.title Vinpearl Phu Quoc
+                                    div.des Kien Giang
+                                .caption.col-xs-6
+                                    .entry2
+                                        div.line-icon
+                                            span.icon: img(src="asset/img/icon/ic-location.png")
+                                            b Hon Tre Island, Nha Trang Bay, <br /> Nha Trang, Khanh Hoa
+                                        hr
+                                        div.row
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-orientation-icon.png")
+                                                    b South East
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-lanscape-square.png")
+                                                    b 58,120 m<sup>2</sup>
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-square.png")
+                                                    b 74,204 m<sup>2</sup>
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-area.png")
+                                                    b Area: 5
+                                        hr
+                                        div.row
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view.png")
+                                                    b View
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view-sea-view.png")
+                                                    |Sea view
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view-golf.png")
+                                                    |Golf view
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view-pool.png")
+                                                    |Pool view
+                                        hr
+
+                                        div.action-bottom.text-center
+                                            a.link(href="") Xem chi tiết
+
+
+                    div.item.item-1.col-xs-4
+                        div.entry
+                            div.image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/item-1.png)")
+                                    img(src="background: url(asset/img/data-example/item-1.png)")
+                                .name-project
+                                    h3.title Vinpearl Phu Quoc
+                                    div.des Kien Giang
+                                .caption
+                                    .entry2
+                                        div.line-icon
+                                            span.icon: img(src="asset/img/icon/ic-location.png")
+                                            b Hon Tre Island, Nha Trang Bay, <br /> Nha Trang, Khanh Hoa
+                                        hr
+                                        div.row
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-orientation-icon.png")
+                                                    b South East
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-lanscape-square.png")
+                                                    b 58,120 m<sup>2</sup>
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-square.png")
+                                                    b 74,204 m<sup>2</sup>
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-area.png")
+                                                    b Area: 5
+                                        hr
+                                        div.row
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view.png")
+                                                    b View
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view-sea-view.png")
+                                                    |Sea view
+                                            div.col-xs-6
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view-golf.png")
+                                                    |Golf view
+                                                div.line-icon
+                                                    span.icon: img(src="asset/img/icon/ic-view-pool.png")
+                                                    |Pool view
+                                        hr
+
+                                        div.action-bottom.text-center
+                                            a.link(href="") Xem chi tiết
+
+            div.link-more.text-right
+                a(href="", class="link") See more
+
+
+    div.row-section.odd
+        div.container
+            h2.title-block best view
+            div.list-post2
+                div.row-2
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view3.png')
+                    div.clearfix
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/best-view4.png')
+                    div.item.item2
+                        +itemBestView('asset/img/data-example/best-view5.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+
+    div.row-section
+        div.container
+            h2.title-block UNDER $200,000
+            div.list-post2
+                div.row-2
+                    div.item.item1-2
+                        +itemBestView('asset/img/data-example/under1.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under2.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under3.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under4.png')
+                    div.item.item1
+                        +itemBestView('asset/img/data-example/under5.png')
+                    div.item.item1
+                        .entry
+                            .image-item
+                                .fixframe.thumb(style="background-image: url(asset/img/data-example/best-view6.png)")
+                                    img(src="asset/img/data-example/best-view6.png")
+                                .counter
+                                    .text +100
+                    div.clearfix
+            div.link-more.text-right
+                a(href="", class="link") See more

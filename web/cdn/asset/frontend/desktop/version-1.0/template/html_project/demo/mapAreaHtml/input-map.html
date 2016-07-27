@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <script type="text/javascript" src="../../asset/js/jquery.js"></script>
+        <script type="text/javascript" src="../../asset/js/migrate.js"></script>
+        <script type="text/javascript" src="../../asset/js/jquery.maphilight.js"></script>
+
+        <script type="text/javascript">
+            $document = $(document);
+            var addnew = true,
+                times = 0,
+                resultMap = {};
+            $document.ready(function(){
+
+                var emW = $('.block-map img').width();
+                var emH = $('.block-map img').height();
+                $('.block-map').width(emW).height(emH).css("margin","auto");
+                $('.map').maphilight();
+
+                $('.block-map')
+                    .on('click',function(e){
+                        var elm = $(this);
+                        var xPos = e.pageX - $(elm).offset().left;
+                        var yPos = e.pageY - $(elm).offset().top;
+                        if (addnew == true){
+                            $('#map-tag').append('<area data-maphilight=\'{"strokeColor":"blue","strokeWidth":1,"fillColor":"4caf50","fillOpacity":0.6}\' shape="poly" coords="">');
+                            addnew = false;
+                            resultMap = {
+                                "data-maphilight": {
+                                        "strokeColor":"blue",
+                                        "strokeWidth":1,
+                                        "fillColor":"4caf50",
+                                        "fillOpacity":0.6
+                                    },
+                                "shape": "poly",
+                                "coords": ""
+                            };
+                        }
+                        var val = $('#map-tag').find('area').last().attr('coords');
+                        if(val &&  val != undefined){
+                            val += ","+xPos+","+yPos
+                        } else{
+                            val += xPos+","+yPos
+                        }
+                        // set DATA to undo by times
+                        times ++;
+                        localStorage.setItem( 'undo_'+times , val);
+
+                        // print data to input
+                        resultMap.coords = val;
+                        $('#txt_jsonmap').val(JSON.stringify(resultMap));
+
+                        // assign to coords on map
+                        $('#map-tag').find('area').last().attr('coords',val);
+
+                        $('.map').maphilight();
+                        $('#map-tag').find('area.active').removeClass('active');
+
+                    });
+
+                $('.reset-map').click(function(e){
+                    e.preventDefault();
+                    localStorage.clear();
+                    $('#map-tag').find('area').remove();
+                    $('#txt_jsonmap').val('');
+                    $('.map').maphilight();
+                    times = 0;
+                    addnew = true;
+                    resultMap = {};
+                });
+
+            });
+
+            $document.on('click','area',function(){
+                $this = $(this);
+                var id_block = $this.data('id');
+            });
+
+            $document.keydown(function(e){
+                if (e.keyCode == 90 && e.ctrlKey){
+
+                    times --;
+                    var val = localStorage.getItem('undo_'+times);
+                    localStorage.removeItem('undo_'+times);
+
+                    resultMap.coords = val;
+                    $('#map-tag').find('area').last().attr('coords',val);
+
+                    $('#txt_jsonmap').val(JSON.stringify(resultMap));
+                    $('.map').maphilight();
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="block-map">
+                    <img src="../../asset/img/data-example/Block-Plan-view_2.png" alt="" class="map" usemap="#planetmap">
+                    <map id="map-tag" name="planetmap" />
+                </div>
+                <hr />
+                <div class="text-right">
+                    <a href="" class="btn btn-danger btn-sm reset-map"><span class="glyphicon glyphicon-repeat"></span> Vẽ lại</a>
+                </div>
+                <p>
+                    <label for="">Chọn bài viết</label>
+                    <select name="" class="form-control" id="txt_id_obj">
+                        <option value="1">Bài 1</option>
+                        <option value="2">Bài 2</option>
+                        <option value="3">Bài 3</option>
+                    </select>
+                </p>
+                <p>
+                    <textarea class="form-control" rows="5" id="txt_jsonmap"></textarea>
+                </p>
+                <p>
+                    <textarea class="form-control" rows="5" id="txt_html"></textarea>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

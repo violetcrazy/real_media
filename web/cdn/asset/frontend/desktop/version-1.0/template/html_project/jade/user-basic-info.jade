@@ -1,0 +1,57 @@
+extends user_template.jade
+
+
+block js_header
+    script(type="text/javascript", src="asset/js/upload-avatar.js")
+    
+block content
+    div.container.m-t-30.m-b-30
+        div.row
+            div.col-xs-3
+                div.entry-sidebar
+                    div.content-block.sidebar-user
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                            a.btn-upload-img(href="") Update avatar
+                            input#upload-avatar.hidden(type="file")
+                            
+                        div.username DINH MANH C
+                        div.type-user User
+                        ul.menu-user.list-unstyled
+                            li: a.active(href="") Basic Info
+                            li: a(href="") Purchased Properties
+                            li: a(href="") Saved Homes
+                            li: a(href="") Saved Searchs
+                            li: a(href="") Messages
+                            li: a(href="") Settings
+
+            div.col-xs-9.single-user
+                +breadcrumbs(['User','Basic info'])
+                h2.title-block.title-page BASIC INFO
+                div.top-info
+                    h1.username Dat Nguyen
+                        a.pull-right.edit-profile(href="user-settings.html") Chỉnh sửa
+                    div.des Joined Sep 21, 2015
+
+                hr
+
+                div.info-user-line
+                    table.table-content
+                        tr
+                            th(width="90px").text Birthday
+                            td.detail 01/05/1991
+                        tr
+                            th.text Email
+                            td.detail datnguyen@gmail.com
+                        tr
+                            th.text Phone
+                            td.detail 0975 628 172
+                        tr
+                            th.text Address
+                            td.detail Nguyen Kiem St., Binh Thanh Dist., HCMC
+                        tr
+                            th.text Country
+                            td.detail VietNam
+                        tr
+                            th.text Job tittle
+                            td.detail Graphic Designer

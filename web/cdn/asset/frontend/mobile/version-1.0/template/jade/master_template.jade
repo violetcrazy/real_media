@@ -1,0 +1,82 @@
+doctype HTML
+html
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no")
+    block title
+        title Trang chủ
+    meta(charset='utf-8')
+
+    block css_header
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900")
+    link(rel="stylesheet", href="asset/css/style.css")
+
+    script(type="text/javascript", src="asset/js/jquery.js")
+    block js_header
+    script(type="text/javascript", src="asset/js/global.js")
+
+    body
+        div.header-site
+            div.block-left
+            div.block-center
+                a: img(src="asset/img/logo.png", alt="")
+            a.block-right(href="search.html")
+        div.menu-sidebar
+            div.header-menu
+                div.tool-left
+                    a(href="") Tiếng Anh
+                    a(href="") Tiếng Việt
+                a.btn-close-menu
+            div.wrap-menu
+                .entry
+                    ul.menu-content
+                        li.has-child
+                            a
+                                span.icon-esta.icon-user
+                                |Lan Le
+                            ul.sub-menu
+                                li: a Thông tin cơ bản
+                                li: a Căn hộ đã mua
+                                li: a Thông báo
+                                li: a Đã lưu
+                                li: a Cài đặt
+
+                        li: a Đăng nhập
+                        li: a Dự án
+                        li: a Bán
+                        li: a Thuê
+                        li: a Dịch vụ mở rộng
+                        li: a Tìm đại lý
+                        li: a Tin tức
+                        li.has-child
+                            a Nhiều hơn
+                            ul.sub-menu
+                                li: a Đăng nhập
+                                li: a Dự án
+                                li: a Bán
+                                li: a Thuê
+                                li: a Dịch vụ mở rộng
+                                li: a Tìm đại lý
+                        li: a Thoát
+
+        block content
+
+        div.footer-site
+            .entry-footer
+                div.address
+                        .entry
+                            div.title HOCHIMINH CITY
+                            div.des Topaz 1 Building, 92 Nguyen Huu Canh, <br> Ward 22, Binh Thanh Dist., HCMC
+                        .entry
+                            div.title HANOI
+                            div.des R4 Building, Royal City Residence,<br> 72A Nguyen Trai, Thanh Xuan Dist., Hanoi
+                        .entry
+                            div <b>TEL :</b> +(84) 8 6689 3838
+                            div <b>HCMC :</b> +(84) 93 996 07 07
+                            div <b>HANOI :</b> +(84) 983 1111 02
+                div.footer-bottom
+                    div.text-center
+                        div.title FOLLOW US
+                        div.social
+                            a.facebook(href="#"): img(src="asset/img/icon/ic-google-w.png")
+                            a.google(href="#"): img(src="asset/img/icon/ic-facebook-w.png")
+                            a.twiter(href="#"): img(src="asset/img/icon/ic-twitter-w.png")
+                        div.copyright Copyright Esta 2015 All Rights Reserved

@@ -1,0 +1,138 @@
+extends user_template.jade
+block content
+    div.container.m-t-30.m-b-30
+        div.row
+            div.col-xs-3
+                div.entry-sidebar
+                    div.content-block.sidebar-user
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                        div.username DINH MANH C
+                        div.type-user User
+                        ul.menu-user.list-unstyled
+                            li: a(href="") Basic Info
+                            li: a(href="") Purchased Properties
+                            li: a(href="") Saved Homes
+                            li: a(href="") Saved Searchs
+                            li: a(href="") Messages
+                            li: a.active(href="") Settings
+
+            div.col-xs-9.single-user
+                +breadcrumbs(['User','Settings'])
+                h2.title-block.title-page Settings
+
+                form.form-horizontal.dropdown-select-control
+                    hr
+                    h3.title-form Account Settings
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") First name
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Last name
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Password
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Birthday
+                        div(class="col-xs-8")
+                            div.row-10
+                                div.col-xs-4
+                                    - var data = ["","Mounth"]
+                                    - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                    +customSelect(data,list)
+                                div.col-xs-4
+                                    - var data = ["","Day"]
+                                    - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                    +customSelect(data,list)
+                                div.col-xs-4
+                                    - var data = ["","Year"]
+                                    - var list = {0:{parent:"1990"},1:{parent:"1992"},2:{parent:"1994"},3:{parent:"1996"},4:{parent:"1998"},5:{parent:"2000"},6:{parent:"2002"}}
+                                    +customSelect(data,list)
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Email
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Phone
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Address
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Country
+                        div(class="col-xs-8")
+                            div.row-10
+                                div.col-xs-4
+                                    - var data = ["","City"]
+                                    - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                    +customSelect(data,list)
+                                div.col-xs-4
+                                    - var data = ["","District"]
+                                    - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                    +customSelect(data,list)
+                                div.col-xs-4
+                                    - var data = ["","Ward"]
+                                    - var list = {0:{parent:"1990"},1:{parent:"1992"},2:{parent:"1994"},3:{parent:"1996"},4:{parent:"1998"},5:{parent:"2000"},6:{parent:"2002"}}
+                                    +customSelect(data,list)
+                    div.form-group
+                        label(for="name" class="col-sm-2 text-left control-label") Job tittle
+                        div.col-sm-8
+                            input.form-control(type="text", id="name")
+
+                    hr
+
+                    h3.title-form Saved Searches
+                    div.clearfix
+                    div.form-group
+                        label(for="name" class="col-sm-5 control-label text-left") Saved Searches
+                        div.col-sm-7
+                            div.row-10
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'save_search',id: 'save_search_on', text: 'On'})
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'save_search',id: 'save_search_off', text: 'Off'})
+                                .col-xs-4
+
+                    div.form-group
+                        label(for="name" class="col-sm-5 control-label text-left") Saved Houses
+                        div.col-sm-7
+                            div.row-10
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'save_houses',id: 'save_houses_on', text: 'On'})
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'save_houses',id: 'save_houses_off', text: 'Off'})
+                                .col-xs-4
+                    div.form-group
+                        label(for="name" class="col-sm-5 control-label text-left") Purchased Properties
+                        div.col-sm-7
+                            div.row-10
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'purchased',id: 'purchased_on', text: 'On'})
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'purchased',id: 'purchased_off', text: 'Off'})
+                                .col-xs-4
+                    div.form-group
+                        label(for="name" class="col-sm-5 control-label text-left") Newsletter
+                        div.col-sm-7
+                            div.row-10
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'newsletter',id: 'newsletter_on', text: 'On'})
+                                .col-xs-4.checkbox-medium-size
+                                    +customRadioStyleCheckbox({group: 'newsletter',id: 'newsletter_off', text: 'Off'})
+                                .col-xs-4.size-check-box
+                                    - var data = ["","Daily"]
+                                    - var list = {0:{parent:"Daily"},1:{parent:"Weekly"},2:{parent:"Monthly"}}
+                                    +customSelect(data,list)
+
+
+                    hr
+
+                    div.text-center.action-bottom
+                        button.btn.esta-button.btn-lg(type="submit") Save
+                        button.btn.esta-button.btn-lg.dis(type="reset") Cancel

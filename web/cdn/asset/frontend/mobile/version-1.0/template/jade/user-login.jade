@@ -1,0 +1,33 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.block-header-tab.layout-2
+        a.active.item Đại lý
+        a.item Người dùng
+        div.clearfix
+    div.main-content
+        form.form-custom.m-t-15
+            h1.title-style1 Đăng nhập
+
+            div.line-input
+                label Email/ Số diện thoại
+                input.esta-input(type="text" placeholder="Email/ Số diện thoại")
+            div.line-input.m-t-10
+                label Mật khẩu
+                input.esta-input(type="text" placeholder="Nhập mật khẩu")
+            div.line-input.m-t-10
+                .pull-left
+                    label.custom-checkbox(for="remember")
+                        input(type="checkbox")#remember
+                        span.mark
+                        |Ghi nhớ đăng nhập
+                .pull-right
+                    a(href="").text-danger Quên mật khẩu
+                .clearfix
+
+            div.action-bottom.m-t-10.m-b-10
+                a.link-action.esta-button.dis.block.btn-small.text-center(href="") Đăng nhập
+            .text-center.m-b-20
+                |Don't have an account? &#160
+                a(href=""): b.text-danger Sign up

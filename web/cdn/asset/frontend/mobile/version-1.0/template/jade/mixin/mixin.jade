@@ -1,0 +1,89 @@
+mixin thumbBg(bg)
+    .img(style="background-image: url(asset/img/data-example/#{bg})")
+
+mixin customCheckbox(data)
+    label.custom-checkbox(for="#{data.id}")
+        input(type="checkbox", name="#{data.id}", id="#{data.id}")
+        span.mark
+        span.text #{data.text}
+
+mixin customRadioStyleCheckbox(data)
+    label.custom-checkbox(for="#{data.id}")
+        input(type="radio", name="#{data.group}", id="#{data.id}")
+        span.mark
+        span.text #{data.text}
+
+mixin customCheckboxClose(data)
+    label.custom-checkbox(for="#{data.id}")
+        input(type="checkbox", name="#{data.id}", id="#{data.id}")
+        span.mark
+        span.text #{data.text}
+        span.ic-close
+
+mixin customSelect(list)
+    select.esta-select.block
+        each val, index in list
+            option(value="#{index}") #{val.text}
+
+mixin entryStyle3(url)
+    a.entry-item(href="")
+        div.thumbnail
+            .img(style="background-image: url(asset/img/data-example/#{url})")
+            div.price $ 3.000.000
+        div.cation
+            h3.name Vinhomes Times City -A7-88
+            div.address 458 Minh Khai St.
+            div.hr
+            div.block-property
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |50m<sup>2</sup>
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |Lầu thứ 9
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Hướng biển
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |2 Phòng ngủ
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-orientation-black.png", alt="")
+                    |Đông bắc
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bath-black.png", alt="")
+                    |2 Phòng tắm
+                div.clearfix
+
+mixin entryStyle3Wait(url)
+    a.entry-item(href="")
+        div.thumbnail
+            .img(style="background-image: url(asset/img/data-example/#{url})")
+            div.price $ 3.000.000
+        div.cation
+            h3.name Vinhomes Times City -A7-88
+            div.address 458 Minh Khai St.
+            div.hr
+            div.block-property
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                    |50m<sup>2</sup>
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                    |Lầu thứ 9
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                    |Hướng biển
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                    |2 Phòng ngủ
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-orientation-black.png", alt="")
+                    |Đông bắc
+                div.line-icon
+                    img.icon(src="asset/img/data-example/icon/ic-bath-black.png", alt="")
+                    |2 Phòng tắm
+                div.clearfix
+            p: b: i.text-danger Requested on 27/8/2015, 5:00pm
+            div.action-bottom.m-t-15
+                a.link-action.esta-button.dis.block.btn-small.text-center(href="") Xóa

@@ -1,0 +1,15 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.main-content
+        form.form-custom
+            h1.title-style1 Quên mật khẩu
+
+            div.line-input
+                label.m-b-10 Nhập vào email bạn đã dùng để đăng ký tài khoản. Mật khẩu mới sẽ được gửi về cho email này.
+                label Email
+                input.esta-input(type="text" placeholder="Email")
+
+            div.action-bottom.m-t-10.m-b-20
+                a.link-action.esta-button.dis.block.btn-small.text-center(href="") Gửi mật khẩu

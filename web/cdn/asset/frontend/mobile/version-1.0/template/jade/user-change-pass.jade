@@ -1,0 +1,15 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.main-content
+        form.form-custom
+            h1.title-style1 Đổi mật khẩu
+
+            div.line-input
+                label.m-b-10 Nhập mật khẩu mới cho tài khoản của bạn, Tài khoản mới sẽ được xác nhận qua Email
+                label Mật khẩu mới
+                input.esta-input(type="password" placeholder="Mật khẩu")
+
+            div.action-bottom.m-t-10.m-b-20
+                a.link-action.esta-button.dis.block.btn-small.text-center(href="") Đổi mật khẩu

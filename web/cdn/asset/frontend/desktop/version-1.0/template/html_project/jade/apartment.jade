@@ -1,0 +1,440 @@
+extends default.jade
+include element/mixin.jade
+
+block title
+    title Apartment Detail
+
+block js_header
+    script(type="text/javascript", src="asset/js/jquery.flexslider-min.js")
+    script(type="text/javascript", src="asset/js/apartment.js")
+
+block content
+    div.block-search.search-home
+        include element/search.jade
+
+    +breadcrumbs(['Ho Chi Minh','VINHOMES CENTRAL PARK', 'BLOCK A'])
+
+    div.container
+        h2.title-block.title-page BEACH VILLA A4-07
+        div.row
+            div.col-xs-9
+                div.block-view-map
+                    .header
+                        a.line-icon.pull-left.active(href="")
+                            span.icon: img(src="asset/img/ic-view-method/ic_3D furniture_red_20px-01.png")
+                            b 3D Furniture
+                        a.line-icon.pull-left(href="")
+                            span.icon: img(src="asset/img/ic-view-method/ic_building map_20px-03.png")
+                            b Building view
+                        a.line-icon.pull-left(href="")
+                            span.icon: img(src="asset/img/ic-view-method/ic_Plan View_20px.png")
+                            b Plan map
+                        .clearfix
+                    div.body-slider: .apartment-slider
+                        div.wrap-slider-big
+                            div.price $ 850,000
+                            div.caption
+                                .pull-left
+                                    label.line.active#modern
+                                        span.mark
+                                        span.price-item Modern - $ 1,500-$ 2,500
+                                    label.line#contemporaty
+                                        span.mark
+                                        span.price-item Contemporaty - $ 1,500-$ 2,500
+                                    label.line#classic
+                                        span.mark
+                                        span.price-item Classic - $ 1,500-$ 2,500
+                                .pull-right
+                                    div.info-contact
+                                        div.image-logo
+                                            img(src="http://placehold.it/80")
+                                        div.info
+                                            p.text
+                                                |Furnished by <br>
+                                                b Furniture Company A
+                                            a Click here to contact >>
+                                .clearfix
+                            #slider.flexslider
+                                ul.slides
+                                    li: span.entry: img(src="asset/img/data-example/apartment1.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment2.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment3.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment4.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment5.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment6.png")
+                                    li: span.entry: img(src="asset/img/data-example/apartment7.png")
+                        #carousel.flexslider
+                            ul.slides
+                                li: span.entry: img(src="asset/img/data-example/apartment1.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment2.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment3.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment4.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment5.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment6.png")
+                                li: span.entry: img(src="asset/img/data-example/apartment7.png")
+                div.no-display
+                    form#form-request(action="").form-custom
+                        div.popup-inner
+                            h3.title-popup Thông tin khách hàng
+                            div.wrap-row: div.row
+                                div.col-xs-4
+                                    label(for="") Họ và tên
+                                    div.input-line
+                                        input.form-control(type="text" placeholder="Nhập họ và tên")
+
+                                div.col-xs-4
+                                    label(for="") Số điện thoại
+                                    div.input-line
+                                        input.form-control(type="text" placeholder="Nhập số điện thoại")
+
+                                div.col-xs-4
+                                    label(for="") Email
+                                    div.input-line
+                                        input.form-control(type="text" placeholder="Nhập email")
+                            div.m-t-15
+                                label(for="") Ghi chú
+                                div.inpu-line
+                                    textarea.form-control(placeholder="Ghi chú")
+
+                            div.title-row Phương thức thanh toán
+                            div.wrap-row: div.row
+                                div.col-xs-4
+                                    +customRadioStyleCheckbox({'group': 'method', 'id': 'method-full', 'text': '100%'})
+                                div.col-xs-4
+                                    +customRadioStyleCheckbox({'group': 'method', 'id': 'method-persent', 'text': 'Theo tiến độ'})
+                                div.col-xs-4
+                                    +customRadioStyleCheckbox({'group': 'method', 'id': 'method-loan', 'text': 'Vay vốn'})
+                            div.hr
+                            .action-bottom.text-center
+                                button.btn.esta-button.dis(type="reset") Hủy
+                                &#160
+                                button.btn.esta-button#send-request-action(type="submit") Gửi yêu cầu
+
+
+                div.apartment7ment-detail
+                    div.share-tool
+                        span.text Share this
+                        a.item-share(href=""): img(src="asset/img/google.png")
+                        a.item-share(href=""): img(src="asset/img/facebook.png")
+                        a.item-share(href=""): img(src="asset/img/twitter.png")
+                        div.action-right
+                            a.btn.esta-button.run-fancybox(href="#form-request") Gửi yêu cầu
+                            a.btn.esta-button.dis Phương thức thanh toán
+                    div.info-request
+                        |Requested on 23/12/2013, 12:03 pm
+
+                    div.tools-view-panorama
+                        div.entry
+                            img(src="asset/img/data-example/panorama.png")
+                            div.caption Panorama view
+
+                    div.title-block-apartment Suitable for
+                    div.entry-content
+                        .row.layout-3
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox
+                                    span.mark
+                                    span.text Lorem ipsum.
+                    div.title-block-apartment Best for
+                    div.entry-content
+                        .row.layout-3
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                            .col-xs-4
+                                .line-checkbox.checked
+                                    span.mark
+                                    span.text Lorem ipsum.
+                    div.title-block-apartment Overview
+                    div.entry-content.p-b-4
+                        div.row.layout-3
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>South East</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>43.91 ha</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>13,000 m<sup>2</sup></b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>20 blocks</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Apartments: 360</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Available: 237</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Processing: 100</b>
+                            .col-xs-4
+                                div.line-icon.p
+                                    span.icon: img(src="asset/img/icon/ic-security.png")
+                                    |<b>Sold: 23</b>
+                        div.description
+                            div.short
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                            div.long
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+                            div.more-link
+                                a.link  [+More]
+
+                    div.title-block-apartment Property Features
+                    div.entry-content.p-b-4
+                        div.description
+                            div.short
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>South East</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>43.91 ha</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>13,000 m<sup>2</sup></b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>20 blocks</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Apartments: 360</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Available: 237</b>
+                            div.long
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>South East</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>43.91 ha</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>13,000 m<sup>2</sup></b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>20 blocks</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Apartments: 360</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Available: 237</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>South East</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>43.91 ha</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>13,000 m<sup>2</sup></b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>20 blocks</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Apartments: 360</b>
+                                .col-xs-4
+                                    div.line-icon.p
+                                        span.icon: img(src="asset/img/icon/ic-security.png")
+                                        |<b>Available: 237</b>
+                            div.more-link
+                                a.link  [+More]
+
+                    div.title-block-apartment Position
+                    div.entry-position
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat nam explicabo dolorem, similique suscipit quas?
+                        br
+                        img(src="asset/img/data-example/popsition.png")
+
+                    form.form-send-agent
+                        .title-form Send message to Agent
+                        div.row
+                            div.col-xs-6
+                                div.form-group
+                                    div.text First Name
+                                    div.imput: input(type="text", class="form-control")
+                                div.form-group
+                                    div.text Phone
+                                    div.imput: input(type="text", class="form-control")
+                            div.col-xs-6
+                                div.form-group
+                                    div.text Last Name
+                                    div.imput: input(type="text", class="form-control")
+                                div.form-group
+                                    div.text Email
+                                    div.imput: input(type="text", class="form-control")
+                        div.textarea
+                            div.text Content
+                            textarea(placeholder="Typing here", class="form-control", rows="5")
+                        div.text-center.action-bar
+                            button.btn.esta-button(type="submit") Send
+                            button.btn.esta-button.dis(type="reset") Cancel
+            div.col-xs-3
+                div.entry-sidebar
+                    h3.title-style1 Agent
+                    div.content-block
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                        div.username DINH MANH C
+                        div.intro-agent
+                            div.line-icon
+                                span.icon: img(src="asset/img/icon/ic-mail.png")
+                                |agent12345@gmail.com
+                            div.line-icon
+                                span.icon: img(src="asset/img/icon/ic-phone.png")
+                                |+(84) 92 22 22 222
+                            div.line-icon
+                                span.icon: img(src="asset/img/icon/ic-home-black.png")
+                                |20 Recent Sales
+                        div.summary-user
+                            div.title Professional (5 years experience)
+                            div.description
+                                div.short
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, adipiscing elit...
+                                div.long
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, adipiscing elit...
+                                    |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, adipiscing elit...
+                                div.more-link
+                                    a.link  [+More]
+                        div.action-bottom
+                            a.link-action.esta-button.btn Contact
+                    div.box-widget
+                        h3.title-widget Bank Interest
+                        div.content-widget
+                            div.group-form
+                                - var data = ["usd","USD"]
+                                - var list = {0:{parent:"VND"},1:{parent:"PRM"},3:{parent:"BATH"}}
+                                +customSelect(data,list)
+                            div.group-form
+                                - var data = ["bank","Bank"]
+                                - var list = {0:{parent:"VietcomeBank"},1:{parent:"TpBank"},3:{parent:"VPBank"}}
+                                +customSelect(data,list)
+                            div.group-form
+                                - var data = ["expiration","Expiration"]
+                                - var list = {0:{parent:"1 Month"},1:{parent:"2 Month"},3:{parent:"3 Month"}}
+                                +customSelect(data,list)
+                            div.group-form
+                                - var data = ["Interest","Interest"]
+                                - var list = {0:{parent:"20%"},1:{parent:"30%"},3:{parent:"40%"}}
+                                +customSelect(data,list)
+                            div.text-intro.group-form
+                                |This table will help you calculate the amount needed borrow from banks to mortgage
+                            div.text-center.group-form
+                                button.btn.esta-button Result
+
+                    div.box-widget
+                        h3.title-widget Feng Shui
+                        div.content-widget
+                            div.group-form
+                                - var data = ["year","Year of birth"]
+                                - var list = {0:{parent:"VND"},1:{parent:"PRM"},3:{parent:"BATH"}}
+                                +customSelect(data,list)
+                            div.group-form
+                                - var data = ["gender","Gender"]
+                                - var list = {0:{parent:"Male"},1:{parent:"Female"},3:{parent:"Undefined"}}
+                                +customSelect(data,list)
+                            div.text-center.group-form
+                                button.btn.esta-button Result
+
+        div.clearfix
+
+        div.other-projects
+            h3.title-block SIMILAR LISTINGS
+            div.list-project.list-post2
+                div.flexslider.slider-other: ul.slides
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')
+                    li: div.item.item2
+                        +itemBestView('asset/img/data-example/best-view1.png')

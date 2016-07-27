@@ -1,0 +1,238 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block js_header
+    script(type="text/javascript", src="asset/js/swiper.js")
+    script(type="text/javascript", src="asset/js/apartment.js")
+
+block content
+    div.block-header-tab.layout-3
+        a.active.item Nội thất
+        a.item(href="search-filter.html") Hình ảnh
+        a.item(href="search-filter.html") Sơ đồ
+        div.clearfix
+    div.main-content
+        h1.title-style1.text-center Tên apartment
+        div.slides-apartment.custom-swiper.row-main
+            - var active = Math.floor(Math.random() * 2)
+            if active == "1"
+                .favorite.active
+            else
+                .favorite
+            - var active = Math.floor(Math.random() * 2)
+            if active == "1"
+                .notification-single.active
+            else
+                .notification-single
+            div.price-main $ 300.000
+            div(class="swiper-container")
+                div(class="swiper-wrapper")
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p3.jpg')
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p2.jpg')
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p4.jpg')
+
+                div(class="swiper-button-prev")
+                div(class="swiper-button-next")
+            div.logo-designer
+                div.thumbnail-custom
+                    +thumbBg('agent3.png')
+                div.summary
+                    |Thiết kế bởi <br> <span class="title">Phát Tài Design </span>
+                div.clearfix
+        div.list-gallery
+            a.item.active(href="")
+                |Modern
+                span.price $ 1,500-$ 2,500
+            a.item(href="")
+                |Contemporaty
+                span.price $ 1,500-$ 2,500
+            a.item(href="")
+                |Classic
+                span.price $ 1,500-$ 2,500
+
+        div.row-main.view-panorama
+            div.button-navi
+                a.btn-left
+                a.btn-right
+            div.panorama
+                img(src="asset/img/data-example/panorama.png", alt="")
+
+        div.share-tool
+            span.text Share this
+            div.block-img
+                a.item-share(href=""): img(src="asset/img/icon/ic-google.png")
+                a.item-share(href=""): img(src="asset/img/icon/ic-facebook.png")
+                a.item-share(href=""): img(src="asset/img/icon/ic-twitter.png")
+
+        p.text-danger.text-center Requested on 23/12/2013, 12:03 pm
+        div.tools-single-apartment
+            a.esta-button.text-center.dis.block Send Request
+            a.esta-button.text-center.dis.block Payment Method
+            a.esta-button.text-center.dis.block Feng Shui
+
+        h3.title-style1.m-t-20 Căn hộ phù hợp với
+        div.block-property-single.layout-2-col
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Sinh viên
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Gia đình
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Văn phòng
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Người già
+            div.clearfix
+        div.hr
+
+        h3.title-style1 Mục đích sử dụng
+        div.block-property-single.layout-2-col
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Đầu tư
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Cho thuê
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Để ở
+            div.line-icon.span.m-b-5
+                span.icon-span
+                |Mua chơi
+            div.clearfix
+        div.hr
+        h3.title-style1 Tổng quan
+        div.block-property-single.layout-3-col.m-t-10
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                |50m<sup>2</sup>
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                |Lầu thứ 9
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                |Hướng biển
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                |2 Phòng ngủ
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-orientation-black.png", alt="")
+                |Đông bắc
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-bath-black.png", alt="")
+                |2 Phòng tắm
+            div.clearfix
+        div.description.m-t-10
+            div.short
+                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+            div.long
+                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s
+                |Vinhomes Royal City, inspired by the elegant European architecture, is said to be the best place to live in Hanoi. |Each apartment is equipped with a full range of modern and |advanced utilities that ensure absolute safety and comfort for |your family. The complex is surrounded by green, clean and safeopen spaces along with a diverse and complete set of facilities Royal City’s...
+            div.more-link
+                a.link  [+Xem thêm]
+        div.hr
+
+        h3.title-style1 Tiện ích
+        div.block-property-single.layout-2-col
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                |Sân băng trong nhà
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                |VINKE
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                |Rạp chiếu phim
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                |Sảnh Lounge
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-size-black.png", alt="")
+                |Club – House 5 sao
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-floor-black.png", alt="")
+                |Nhà sinh hoạt
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-sea-view-black.png", alt="")
+                |Trường liên cấp
+            div.line-icon
+                img.icon(src="asset/img/data-example/icon/ic-bed-black.png", alt="")
+                |Bể bơi
+            div.clearfix
+        div.hr
+
+        h3.title-style1 Vị trí
+        div.des.m-b-10  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat necessitatibus, quasi ut saepe, labore deleniti.
+        div.main-image
+            img(src="asset/img/data-example/popsition.png", alt="")
+        h3.title-style1.m-t-15 Thông tin Đại lý
+        div.view-agent
+            div.content-block
+                div.avatar
+                    img(src="asset/img/data-example/avatar.png")
+                div.summary
+                    .entry
+                        div.username DINH MANH C
+                        div.intro-agent
+                            div.line-icon
+                                span.icon: img(src="asset/img/icon/ic-mail.png")
+                                |agent12345@gmail.com
+                            div.line-icon
+                                span.icon: img(src="asset/img/icon/ic-phone.png")
+                                |+(84) 92 22 22 222
+                            div.line-icon
+                                span.icon: img(src="asset/img/icon/ic-home.png")
+                                |20 Recent Sales
+                div.clearfix
+                div.summary-user.m-t-10
+                    div.title.text-danger: b Professional (5 years experience)
+                    div.description
+                        div.short
+                            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, adipiscing elit...
+                        div.long
+                            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, adipiscing elit...
+                            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sollicitudin arcu lacus. Curabitur eget est mollis, adipiscing elit...
+                        div.more-link
+                            a.link  [+Xem thêm]
+                div.action-bottom.m-t-10.m-b-15
+                    a.link-action.esta-button.dis.block.btn-small Contact
+        div.hr
+
+        h3.title-style1 Căn hộ tương tự
+        div.slides-project-other.custom-swiper.row-main
+            div(class="swiper-container")
+                div(class="swiper-wrapper")
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p1.jpg')
+                            .caption
+                                h3.title Lorem ipsum dolor.
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p2.jpg')
+                            .caption
+                                h3.title Lorem ipsum dolor.
+                    div(class="swiper-slide")
+                        div.entry
+                            div.thumbnail-custom
+                                +thumbBg('p3.jpg')
+                            .caption
+                                h3.title Lorem ipsum dolor.
+
+                div(class="swiper-button-prev")
+                div(class="swiper-button-next")

@@ -1,0 +1,222 @@
+include element/mixin.jade
+
+doctype HTML
+html
+    block title
+        title Trang chủ
+    meta(charset='utf-8')
+
+    block css_header
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900")
+    link(rel="stylesheet", href="asset/css/style.css")
+
+    script(type="text/javascript", src="asset/js/jquery.js")
+    script(type="text/javascript", src="asset/js/bootstrap.js")
+    script(type="text/javascript", src="asset/js/jquery.mCustomScrollbar.concat.min.js")
+    block js_header
+    script(type="text/javascript", src="asset/js/global.js")
+
+    body
+        div.top-header
+            div.container
+                div.pull-left.item-dropdown
+                    - var data = ["en","ENG"]
+                    - var list = {en:{parent:"ENG"},vi:{parent:"VI"}}
+                    +customSelectLink(data,list)
+                div.pull-left.item-dropdown
+                    - var data = ["vnd","VND"]
+                    - var list = {usd:{parent:"USD"},vnd:{parent:"VND"}}
+                    +customSelectLink(data,list)
+
+                div.pull-right.item-dropdown.login
+                    a(href="", data-toggle="modal", data-target="#login") Sign In
+
+                div.pull-right.item-dropdown.user
+                    - var data = ["name","DAT"]
+                    - var list = {1: {parent: "Basic Info"},2:{parent:"Purchased Properties"},4: {parent: 'Save homes'}, 3: {parent: 'Notifications'}, 6: {parent: 'Settings'}, 7: {parent: 'Sign Out'}}
+                    +customSelectLink(data,list)
+
+                div.pull-right.item-dropdown
+                    a.notify
+                        span.icon-notify.icon
+                        span.count 3
+                div.pull-right.item-dropdown
+                    a.notify
+                        span.icon-home.icon
+                        span.count 3
+
+        div.header.header-site
+            div.container
+                div.logo.pull-left
+                    a: img(src="asset/img/logo.png", alt="")
+                div.main-menu.pull-right
+                    div.wrap-menu
+                        ul.menu
+                            li: a.active(href="") Project
+                            li: a(href="") Buy
+                            li: a(href="") Rent
+                            li: a(href="") EXTRA SERVICE
+                            li: a(href="") FIND AGENT
+                            li: a(href="") NEWS
+                            li
+                                a(href="") MORE
+                                ul.sub-menu
+                                    li: a(href="") Project
+                                    li: a(href="") Buy
+                                    li: a(href="") Rent
+                                    li: a(href="") Extra Service
+                                    li: a(href="") Find Agent
+                                    li: a(href="") News
+                                    li: a(href="") More
+                div.clear
+
+        block content
+
+        div.footer-site
+            div.container
+                div.row.address
+                    div.col-xs-4
+                        div.entry
+                            div.title HOCHIMINH CITY
+                            div.des Topaz 1 Building, 92 Nguyen Huu Canh, Ward 22, Binh Thanh Dist., HCMC
+                    div.col-xs-4
+                        div.entry
+                            div.title HANOI
+                            div.des R4 Building, Royal City Residence, 72A Nguyen Trai, Thanh Xuan Dist., Hanoi
+                    div.col-xs-4
+                        .entry.phone
+                            div <b>TEL :</b> +(84) 8 6689 3838
+                            div <b>HCMC :</b> +(84) 93 996 07 07
+                            div <b>HANOI :</b> +(84) 983 1111 02
+                div.footer-bottom
+                    div.text-center
+                        div.title folow us
+                        div.social
+                            a.facebook(href="#"): img(src="asset/img/icon/ic-facebook.png")
+                            a.google(href="#"): img(src="asset/img/icon/ic-google.png")
+                            a.twiter(href="#"): img(src="asset/img/icon/ic-twiter.png")
+                        div.copyright Copyright Esta 2015 All Rights Reserved
+
+        div(class="modal fade model-custom", id="logup", tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+            div(class="modal-dialog", role="document")
+                div(class="modal-content", style="width: 650px")
+                    span.close-popup(aria-hidden="true", data-dismiss="modal")
+                    div(class="modal-body")
+                        h3.title-model SIGN UP
+                        form.form-horizontal.custom-from#form-register
+                            div.row-type-register
+                                label.button-esta.pull-left(for="agent")
+                                    input(type="radio", checked, name="type_user", value="agent", id="agent")
+                                    span.mark.dis.esta-button.btn  AGENT
+                                span.or Or
+                                label.button-esta.pull-right(for="user")
+                                    input(type="radio", name="type_user", value="user", id="user")
+                                    span.mark.dis.esta-button.btn  USER
+                                div.clearfix
+                            div.form-block
+                                div.form-group.has-error
+                                    label(for="frist-name" class="col-xs-2 control-label") First name
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder=" * This info can't be blank")
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Last name
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder="Last name")
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Password
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder="Password")
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Birthday
+                                    div(class="col-xs-10")
+                                        div.row
+                                            div.col-xs-4
+                                                - var data = ["","Mounth"]
+                                                - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                                +customSelect(data,list)
+                                            div.col-xs-4
+                                                - var data = ["","Day"]
+                                                - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                                +customSelect(data,list)
+                                            div.col-xs-4
+                                                - var data = ["","Year"]
+                                                - var list = {0:{parent:"1990"},1:{parent:"1992"},2:{parent:"1994"},3:{parent:"1996"},4:{parent:"1998"},5:{parent:"2000"},6:{parent:"2002"}}
+                                                +customSelect(data,list)
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Email
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder="Email")
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Email
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder="Email")
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Address
+                                    div(class="col-xs-10")
+                                        div.row
+                                            div.col-xs-6
+                                                - var data = ["","Province",'province']
+                                                - var list = {0:{parent:"Hồ Chí Minh"},1:{parent:"Hà Nội"},2:{parent:"Hải Phòng"},3:{parent:"Ninh Thuận"},4:{parent:"Khánh Hòa"},5:{parent:"Bình Thuận"},6:{parent:"Tiền Giang"}}
+                                                +customSelect(data,list)
+                                            div.col-xs-6
+                                                - var data = ["","Dictricts",'dictricts']
+                                                - var list = {0:{parent:"0"},1:{parent:"1"},2:{parent:"2"},3:{parent:"3"},4:{parent:"4"},5:{parent:"5"},6:{parent:"6"}}
+                                                +customSelect(data,list)
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Country
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder="Country")
+                                div.form-group.text-right
+                                    div.col-xs-12
+                                        +customRadioStyleCheckbox({group: 'jod', id: 'company', text: 'Company'})
+                                        +customRadioStyleCheckbox({group: 'jod', id: 'freelancer', text: 'Freelancer'})
+                                div.form-group.accept-bottom
+                                    label(for="frist-name" class="col-xs-2 control-label")
+                                    div(class="col-xs-10")
+                                        +customCheckbox({id: 'ok', text: 'I accept ESTA\'s Terms of Use and Privacy Policy.'})
+                                div.submit-button.text-center
+                                    button.esta-button.btn.medium(type="submit") Sign up
+
+        div(class="modal fade model-custom", id="login", tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+            div(class="modal-dialog", role="document")
+                div(class="modal-content", style="width: 650px")
+                    span.close-popup(aria-hidden="true", data-dismiss="modal")
+                    div(class="modal-body")
+                        h3.title-model SIGN IN
+                        form.form-horizontal.custom-from
+                            div.form-block
+                                div.form-group.has-error
+                                    label(for="frist-name" class="col-xs-2 control-label") First name
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder=" * This info can't be blank")
+                                div.form-group
+                                    label(for="frist-name" class="col-xs-2 control-label") Password
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder="Password")
+                                div.form-group.text-left.checkbox-left
+                                    div.col-xs-10.col-xs-push-2
+                                        +customRadioStyleCheckbox({group: 'jod', id: 'company', text: 'Remember me'})
+                                        a.text-danger.link-forgot-pass(href="", data-toggle="modal", data-target="#forgot",aria-hidden="true", data-dismiss="modal") Forgot password
+
+                                div.form-group.submit-button.text-center
+                                    button.esta-button.btn.medium(type="submit") Sign in
+                                div.text-center
+                                    |Don't have an account?
+                                    a.text-danger(href="", data-toggle="modal", data-target="#logup",aria-hidden="true", data-dismiss="modal") <b> Sign up</b>
+
+        div(class="modal fade model-custom", id="forgot", tabindex="-1", role="dialog", aria-labelledby="myModalLabel")
+            div(class="modal-dialog", role="document")
+                div(class="modal-content", style="width: 650px")
+                    span.close-popup(aria-hidden="true", data-dismiss="modal")
+                    div(class="modal-body")
+                        form.form-horizontal.custom-from#reset_pass
+                            div.intro-form.text-center
+                                h3.title-center Reset your Password
+                                div.text-intro Enter the email address associated with your account, and we'll email you a link to reset your password.
+                            div.form-block
+                                div.form-group.has-error
+                                    label(for="frist-name" class="col-xs-2 control-label") Email
+                                    div(class="col-xs-10")
+                                        input(type="email" class="form-control" id="frist-name" placeholder=" * This info can't be blank")
+                                div.form-group.submit-button.text-center
+                                    button.esta-button.btn.medium(type="submit") Send reset link

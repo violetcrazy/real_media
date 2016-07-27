@@ -1,0 +1,61 @@
+include mixin.jade
+
+.container
+    form
+        div.title-search Tìm kiếm căn hộ
+        div.item.buy-select.menu-left
+            - var data = ["type-project","Buy"]
+            - var list = {1:{parent:"Buy"},2:{parent:"Any"},3:{parent:"Buy for Living"},4:{parent:"Buy for Investment"},5:{parent:"Rent"}}
+            +customSelect(data,list)
+        .input-key-search
+            input(type="text" placeholder="Tìm theo tên dự án, block, căn hộ")
+        div.item
+            - var data = ["location","Location"]
+            - var sub_hcm = ["HCMC - Vihomes Central Park","HCMC - Vinhomes Dong Khoi","HCMC - Vinhomes Royal City","HCMC - Vihomes Ba Son","HCMC - Vinhomes Khanh Hoi","HCMC - Vinhomes Can Gio","HCMC - Vinhomes District 9"]
+            - var sub_hn = ["HANOI - Vinhomes Time City Park Hill","HANOI - Vinhomes Nguyen Chi Thanh","HANOI - Vinhomes Riverside","HANOI - Vinhomes Tran Duy Hung","HANOI - Vinhomes Cao Xa La","HANOI - Vinhomes Green City","HANOI - Vinhomes Lieu Giai"]
+            - var sub_hp = ["HAI PHONG - Vincom Hai Phong","HAI PHONG - Vinhomes Riverside"]
+            - var sub_dn = ["DANANG - Vinpearl Danang","DANANG - Vinpearl Danang"]
+            - var list = {1:{parent:"Any"},2:{parent:"HOCHIMINH CITY", sub: sub_hcm},3:{parent:"HANOI", sub: sub_hn},4:{parent:"HAI PHONG", sub: sub_hp},5:{parent:"HA TINH - Vinhomes Ha Tinh"},6:{parent:"BAC NINH - Vinhome Bac Ninh"},7:{parent: "HA NAM - Vincom Ha Nam"},8:{parent: "NAM DINH - Vincom Nam Dinh"},9:{parent: "THAI BINH - Vincom Thai Binh"},10:{parent: "LAO CAI - Vincom Lao Cai"},11:{parent: "YEN BAI - Vincom Yen Bai"},12:{parent: "HAI DUONG - Vincom Hai Duong"},13:{parent: "QUANG NINH - Eco Villas Quang Ninh"}, 14: {parent: "DANANG", sub: sub_dn}, 15: {parent: "KHANH HOA"}, 16: {parent: "KIEN GIANG - Vinpearl Phu Quoc"} }
+            +customSelect(data,list)
+
+        div.clearfix
+
+        div.row2
+            div.item.menu-left
+                - var data = ["filter-type","Loại căn hộ"]
+                - var list = {1:{parent:"Căn hộ"},2:{parent:"Biệt thự"},3:{parent:"Thông tầng"}}
+                +customSelect(data,list)
+
+            div.item
+                - var data = ["adults","Adults"]
+                - var list = {0:{parent:"Any"},1:{parent:"1 adults"},3:{parent:"2 adults"},3:{parent:"3 adults"},5:{parent:"4 adults"},5:{parent:"5 adults"}}
+                +customSelect(data,list)
+
+            div.item
+                - var data = ["children","Children"]
+                - var list = {0:{parent:"Any"},1:{parent:"1 children"},3:{parent:"2 children"},3:{parent:"3 children"},5:{parent:"4 children"},5:{parent:"5 children"}}
+                +customSelect(data,list)
+
+            div.item
+                - var data = ["min-beds","Min Beds"]
+                - var list = {0:{parent:"Tất cả"},1:{parent:"1"},3:{parent:"2"},3:{parent:"3"},5:{parent:"4"},5:{parent:"5"}}
+                +customSelect(data,list)
+
+            div.item
+                - var data = ["max-beds","Max Beds"]
+                - var list = {0:{parent:"Tất cả"},1:{parent:"1"},3:{parent:"2"},3:{parent:"3"},5:{parent:"4"},5:{parent:"5"}}
+                +customSelect(data,list)
+
+            div.item
+                - var data = ["min-beds","Min Price"]
+                - var list = {0:{parent:"Any"},1:{parent:"1 tỷ"},3:{parent:"2 tỷ"},3:{parent:"3 tỷ"},5:{parent:"4 tỷ"},5:{parent:"5 tỷ"}}
+                +customSelect(data,list)
+
+            div.item
+                - var data = ["max-beds","Max Price"]
+                - var list = {0:{parent:"Any"},1:{parent:"2 tỷ"},3:{parent:"3 tỷ"},3:{parent:"4 tỷ"},5:{parent:"5 tỷ"},5:{parent:"6 tỷ"}}
+                +customSelect(data,list)
+            div.clearfix
+
+        div.item.action-submit
+            button.esta-button(type="submit") Search

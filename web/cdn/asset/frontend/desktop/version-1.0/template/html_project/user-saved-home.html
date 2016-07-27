@@ -1,0 +1,624 @@
+<!DOCTYPE HTML>
+<html>
+  <title>Trang chủ</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <script type="text/javascript" src="asset/js/jquery.js"></script>
+  <script type="text/javascript" src="asset/js/bootstrap.js"></script>
+  <script type="text/javascript" src="asset/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="asset/js/global.js"></script>
+  <body>
+    <div class="top-header">
+      <div class="container">
+        <div class="pull-left item-dropdown">
+          <div class="dropdown custom-select menu">
+            <input type="hidden" name="en"/>
+            <button type="button" id="en" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">ENG</span><span class="arrow"></span></button>
+            <ul aria-labelledby="type-project" class="dropdown-menu">
+              <li><a href="" data-value="en">ENG</a></li>
+              <li><a href="" data-value="vi">VI</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pull-left item-dropdown">
+          <div class="dropdown custom-select menu">
+            <input type="hidden" name="vnd"/>
+            <button type="button" id="vnd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">VND</span><span class="arrow"></span></button>
+            <ul aria-labelledby="type-project" class="dropdown-menu">
+              <li><a href="" data-value="usd">USD</a></li>
+              <li><a href="" data-value="vnd">VND</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pull-right item-dropdown login"><a href="" data-toggle="modal" data-target="#login">Sign In</a></div>
+        <div class="pull-right item-dropdown user">
+          <div class="dropdown custom-select menu">
+            <input type="hidden" name="name"/>
+            <button type="button" id="name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">DAT</span><span class="arrow"></span></button>
+            <ul aria-labelledby="type-project" class="dropdown-menu">
+              <li><a href="" data-value="1">Basic Info</a></li>
+              <li><a href="" data-value="2">Purchased Properties</a></li>
+              <li><a href="" data-value="3">Notifications</a></li>
+              <li><a href="" data-value="4">Save homes</a></li>
+              <li><a href="" data-value="6">Settings</a></li>
+              <li><a href="" data-value="7">Sign Out</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pull-right item-dropdown"><a class="notify"><span class="icon-notify icon"></span><span class="count">3</span></a></div>
+        <div class="pull-right item-dropdown"><a class="notify"><span class="icon-home icon"></span><span class="count">3</span></a></div>
+      </div>
+    </div>
+    <div class="header header-site">
+      <div class="container">
+        <div class="logo pull-left"><a><img src="asset/img/logo.png" alt=""></a></div>
+        <div class="main-menu pull-right">
+          <div class="wrap-menu">
+            <ul class="menu">
+              <li><a href="" class="active">Project</a></li>
+              <li><a href="">Buy</a></li>
+              <li><a href="">Rent</a></li>
+              <li><a href="">EXTRA SERVICE</a></li>
+              <li><a href="">FIND AGENT</a></li>
+              <li><a href="">NEWS</a></li>
+              <li><a href="">MORE</a>
+                <ul class="sub-menu">
+                  <li><a href="">Project</a></li>
+                  <li><a href="">Buy</a></li>
+                  <li><a href="">Rent</a></li>
+                  <li><a href="">Extra Service</a></li>
+                  <li><a href="">Find Agent</a></li>
+                  <li><a href="">News</a></li>
+                  <li><a href="">More</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="container m-t-30 m-b-30">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="entry-sidebar">
+            <div class="content-block sidebar-user">
+              <div class="avatar"><img src="asset/img/data-example/avatar.png"></div>
+              <div class="username">DINH MANH C</div>
+              <div class="type-user">User</div>
+              <ul class="menu-user list-unstyled">
+                <li><a href="">Basic Info</a></li>
+                <li><a href="" class="active">Purchased Properties</a></li>
+                <li><a href="">Saved Homes</a></li>
+                <li><a href="">Saved Searchs</a></li>
+                <li><a href="">Messages</a></li>
+                <li><a href="">Settings</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-9 single-user">
+          <div class="breadcrumbs">
+            <div class="container"><a href="">User</a><span class="symbol">></span><a href="" class="current">PURCHASED PROPERTIES</a>
+            </div>
+          </div>
+          <h2 class="title-block title-page">PURCHASED PROPERTIES</h2>
+          <div class="des-title">You added <b class="text-danger"> 5 </b> properties to Saved Homes. Showing <b class="text-danger"> 1-15.</b></div>
+          <div class="sort-wrap m-t-20"><span class="text-intro">Sort by</span>
+            <div class="content-sort">
+              <div class="item">
+                <div class="dropdown custom-select">
+                  <input type="hidden" id="undefined" name="15"/>
+                  <button type="button" id="15" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">15 results</span><span class="arrow"></span></button>
+                  <ul aria-labelledby="type-project" class="dropdown-menu">
+                    <li><a href="" data-value="30">30 results</a></li>
+                    <li><a href="" data-value="45">45 results</a></li>
+                    <li><a href="" data-value="60">60 results</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <div class="dropdown custom-select">
+                  <input type="hidden" id="undefined" name="1"/>
+                  <button type="button" id="1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Esta Recommened</span><span class="arrow"></span></button>
+                  <ul aria-labelledby="type-project" class="dropdown-menu">
+                    <li><a href="" data-value="2">item</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <div class="dropdown custom-select">
+                  <input type="hidden" id="undefined" name="Price"/>
+                  <button type="button" id="Price" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Price</span><span class="arrow"></span></button>
+                  <ul aria-labelledby="type-project" class="dropdown-menu">
+                    <li><a href="" data-value="2">item</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="item">
+                <div class="dropdown custom-select">
+                  <input type="hidden" id="undefined" name="project"/>
+                  <button type="button" id="project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Project Name</span><span class="arrow"></span></button>
+                  <ul aria-labelledby="type-project" class="dropdown-menu">
+                    <li><a href="" data-value="2">item</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="list-style2">
+            <div class="wrap-list">
+              <div class="item">
+                <div class="thumbnail">
+                  <div class="favorite active"></div><img src="asset/img/data-example/search1.png" alt="">
+                </div>
+                <div class="summary">
+                  <h3 class="title">Vinhomes Times City-A7-88
+                    <div class="price line-icon"><span class="icon"><img src="asset/img/icon/ic-dola.png" alt=""></span>300.000</div>
+                  </h3>
+                  <div class="address">
+                    <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-location-small.png" alt=""></span>Dist. 2, HCMC</div>
+                  </div>
+                  <div class="properties-entry">
+                    <div class="row-box">
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-floor-black.png" alt=""></span>Floor 9st</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size-black.png" alt=""></span>50m2</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed-black.png" alt=""></span>2 bedrooms</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-black.png" alt=""></span>South East</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-sea-view-black.png" alt=""></span>Sea view</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bath-black.png" alt=""></span>1 bathroom</div>
+                      </div>
+                    </div>
+                  </div><a class="esta-button btn">More detail</a>
+                  <div class="action-item"><a href="" data-title="Vinhomes Times City" data-toggle="modal" data-target="#email-agent" aria-hidden="true" data-dismiss="modal" class="send-email-agent line-icon"><span class="icon"><img src="asset/img/icon/ic-mail-grey.png" alt=""></span>Email Agent</a><a href="" class="line-icon"><span class="icon"><img src="asset/img/icon/ic-trash-grey.png" alt=""></span>Remove</a></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="settings-notify"><i class="text-label pull-left">Notifications</i>
+                  <div class="select pull-left">
+                    <div class="dropdown custom-select">
+                      <input type="hidden" id="undefined" name=""/>
+                      <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">On</span><span class="arrow"></span></button>
+                      <ul aria-labelledby="type-project" class="dropdown-menu">
+                        <li><a href="" data-value="0">On</a></li>
+                        <li><a href="" data-value="1">Off</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="thumbnail">
+                  <div class="favorite active"></div><img src="asset/img/data-example/search1.png" alt="">
+                </div>
+                <div class="summary">
+                  <h3 class="title">Vinhomes Times City-A7-88
+                    <div class="price line-icon"><span class="icon"><img src="asset/img/icon/ic-dola.png" alt=""></span>300.000</div>
+                  </h3>
+                  <div class="address">
+                    <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-location-small.png" alt=""></span>Dist. 2, HCMC</div>
+                  </div>
+                  <div class="properties-entry">
+                    <div class="row-box">
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-floor-black.png" alt=""></span>Floor 9st</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size-black.png" alt=""></span>50m2</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed-black.png" alt=""></span>2 bedrooms</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-black.png" alt=""></span>South East</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-sea-view-black.png" alt=""></span>Sea view</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bath-black.png" alt=""></span>1 bathroom</div>
+                      </div>
+                    </div>
+                  </div><a class="esta-button btn">More detail</a>
+                  <div class="action-item"><a href="" data-title="Vinhomes Times City" data-toggle="modal" data-target="#email-agent" aria-hidden="true" data-dismiss="modal" class="send-email-agent line-icon"><span class="icon"><img src="asset/img/icon/ic-mail-grey.png" alt=""></span>Email Agent</a><a href="" class="line-icon"><span class="icon"><img src="asset/img/icon/ic-trash-grey.png" alt=""></span>Remove</a></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="settings-notify"><i class="text-label pull-left">Notifications</i>
+                  <div class="select pull-left">
+                    <div class="dropdown custom-select">
+                      <input type="hidden" id="undefined" name=""/>
+                      <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">On</span><span class="arrow"></span></button>
+                      <ul aria-labelledby="type-project" class="dropdown-menu">
+                        <li><a href="" data-value="0">On</a></li>
+                        <li><a href="" data-value="1">Off</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="thumbnail">
+                  <div class="favorite active"></div><img src="asset/img/data-example/search1.png" alt="">
+                </div>
+                <div class="summary">
+                  <h3 class="title">Vinhomes Times City-A7-88
+                    <div class="price line-icon"><span class="icon"><img src="asset/img/icon/ic-dola.png" alt=""></span>300.000</div>
+                  </h3>
+                  <div class="address">
+                    <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-location-small.png" alt=""></span>Dist. 2, HCMC</div>
+                  </div>
+                  <div class="properties-entry">
+                    <div class="row-box">
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-floor-black.png" alt=""></span>Floor 9st</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size-black.png" alt=""></span>50m2</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed-black.png" alt=""></span>2 bedrooms</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-black.png" alt=""></span>South East</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-sea-view-black.png" alt=""></span>Sea view</div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bath-black.png" alt=""></span>1 bathroom</div>
+                      </div>
+                    </div>
+                  </div><a class="esta-button btn">More detail</a>
+                  <div class="action-item"><a href="" data-title="Vinhomes Times City" data-toggle="modal" data-target="#email-agent" aria-hidden="true" data-dismiss="modal" class="send-email-agent line-icon"><span class="icon"><img src="asset/img/icon/ic-mail-grey.png" alt=""></span>Email Agent</a><a href="" class="line-icon"><span class="icon"><img src="asset/img/icon/ic-trash-grey.png" alt=""></span>Remove</a></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="settings-notify"><i class="text-label pull-left">Notifications</i>
+                  <div class="select pull-left">
+                    <div class="dropdown custom-select">
+                      <input type="hidden" id="undefined" name=""/>
+                      <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">On</span><span class="arrow"></span></button>
+                      <ul aria-labelledby="type-project" class="dropdown-menu">
+                        <li><a href="" data-value="0">On</a></li>
+                        <li><a href="" data-value="1">Off</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="pagination">
+              <div class="text-cout">1-15 of 1,438 Results</div>
+              <ul class="list-link list-unstyled">
+                <li><a href="" class="first"></a></li>
+                <li><a href="" class="item active">1</a></li>
+                <li><a href="" class="item">2</a></li>
+                <li><a href="" class="item">3</a></li>
+                <li><a href="" class="item">4</a></li>
+                <li><a href="" class="item">5</a></li>
+                <li><a href="" class="last"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="email-agent" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade model-custom">
+      <div role="document" class="modal-dialog">
+        <div style="width: 650px" class="modal-content"><span aria-hidden="true" data-dismiss="modal" class="close-popup"></span>
+          <div class="modal-body">
+            <h3 class="title-model">Contact this Agent</h3>
+            <form class="form-horizontal custom-from">
+              <input type="hidden" id="title_article">
+              <div class="row">
+                <div class="col-xs-4">
+                  <div>
+                    <div class="text-label">Name</div>
+                    <input type="email" id="frist-name" placeholder="Name" class="form-control">
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div>
+                    <div class="text-label">Phone</div>
+                    <input type="email" id="frist-name" placeholder="Phone" class="form-control">
+                  </div>
+                </div>
+                <div class="col-xs-4">
+                  <div>
+                    <div class="text-label">Email</div>
+                    <input type="email" id="frist-name" placeholder="Email" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="m-t-15">
+                <div class="text-label">Send the message</div>
+                <textarea name="content" rows="5" class="form-control"></textarea>
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-group submit-button text-center m-t-20">
+                <button type="submit" class="esta-button btn medium">Ok</button>
+              </div>
+              <div class="text-center">By sending, you agree to <b class="text-danger">Esta's Terms of Use </b> and <b class="text-danger">Privacy Policy</b></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="asset/js/send-email-popup.js"></script>
+    <div class="footer-site">
+      <div class="container">
+        <div class="row address">
+          <div class="col-xs-4">
+            <div class="entry">
+              <div class="title">HOCHIMINH CITY</div>
+              <div class="des">Topaz 1 Building, 92 Nguyen Huu Canh, Ward 22, Binh Thanh Dist., HCMC</div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="entry">
+              <div class="title">HANOI</div>
+              <div class="des">R4 Building, Royal City Residence, 72A Nguyen Trai, Thanh Xuan Dist., Hanoi</div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="entry phone">
+              <div><b>TEL :</b> +(84) 8 6689 3838</div>
+              <div><b>HCMC :</b> +(84) 93 996 07 07</div>
+              <div><b>HANOI :</b> +(84) 983 1111 02</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="text-center">
+            <div class="title">folow us</div>
+            <div class="social"><a href="#" class="facebook"><img src="asset/img/icon/ic-facebook.png"></a><a href="#" class="google"><img src="asset/img/icon/ic-google.png"></a><a href="#" class="twiter"><img src="asset/img/icon/ic-twiter.png"></a></div>
+            <div class="copyright">Copyright Esta 2015 All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="logup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade model-custom">
+      <div role="document" class="modal-dialog">
+        <div style="width: 650px" class="modal-content"><span aria-hidden="true" data-dismiss="modal" class="close-popup"></span>
+          <div class="modal-body">
+            <h3 class="title-model">SIGN UP</h3>
+            <form id="form-register" class="form-horizontal custom-from">
+              <div class="row-type-register">
+                <label for="agent" class="button-esta pull-left">
+                  <input type="radio" checked name="type_user" value="agent" id="agent"><span class="mark dis esta-button btn"> AGENT</span>
+                </label><span class="or">Or</span>
+                <label for="user" class="button-esta pull-right">
+                  <input type="radio" name="type_user" value="user" id="user"><span class="mark dis esta-button btn"> USER</span>
+                </label>
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-block">
+                <div class="form-group has-error">
+                  <label for="frist-name" class="col-xs-2 control-label">First name</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder=" * This info can't be blank" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Last name</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder="Last name" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Password</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder="Password" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Birthday</label>
+                  <div class="col-xs-10">
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <div class="dropdown custom-select">
+                          <input type="hidden" id="undefined" name=""/>
+                          <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Mounth</span><span class="arrow"></span></button>
+                          <ul aria-labelledby="type-project" class="dropdown-menu">
+                            <li><a href="" data-value="0">0</a></li>
+                            <li><a href="" data-value="1">1</a></li>
+                            <li><a href="" data-value="2">2</a></li>
+                            <li><a href="" data-value="3">3</a></li>
+                            <li><a href="" data-value="4">4</a></li>
+                            <li><a href="" data-value="5">5</a></li>
+                            <li><a href="" data-value="6">6</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="dropdown custom-select">
+                          <input type="hidden" id="undefined" name=""/>
+                          <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Day</span><span class="arrow"></span></button>
+                          <ul aria-labelledby="type-project" class="dropdown-menu">
+                            <li><a href="" data-value="0">0</a></li>
+                            <li><a href="" data-value="1">1</a></li>
+                            <li><a href="" data-value="2">2</a></li>
+                            <li><a href="" data-value="3">3</a></li>
+                            <li><a href="" data-value="4">4</a></li>
+                            <li><a href="" data-value="5">5</a></li>
+                            <li><a href="" data-value="6">6</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-xs-4">
+                        <div class="dropdown custom-select">
+                          <input type="hidden" id="undefined" name=""/>
+                          <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Year</span><span class="arrow"></span></button>
+                          <ul aria-labelledby="type-project" class="dropdown-menu">
+                            <li><a href="" data-value="0">1990</a></li>
+                            <li><a href="" data-value="1">1992</a></li>
+                            <li><a href="" data-value="2">1994</a></li>
+                            <li><a href="" data-value="3">1996</a></li>
+                            <li><a href="" data-value="4">1998</a></li>
+                            <li><a href="" data-value="5">2000</a></li>
+                            <li><a href="" data-value="6">2002</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Email</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder="Email" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Email</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder="Email" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Address</label>
+                  <div class="col-xs-10">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <div class="dropdown custom-select">
+                          <input type="hidden" id="province" name=""/>
+                          <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Province</span><span class="arrow"></span></button>
+                          <ul aria-labelledby="type-project" class="dropdown-menu">
+                            <li><a href="" data-value="0">Hồ Chí Minh</a></li>
+                            <li><a href="" data-value="1">Hà Nội</a></li>
+                            <li><a href="" data-value="2">Hải Phòng</a></li>
+                            <li><a href="" data-value="3">Ninh Thuận</a></li>
+                            <li><a href="" data-value="4">Khánh Hòa</a></li>
+                            <li><a href="" data-value="5">Bình Thuận</a></li>
+                            <li><a href="" data-value="6">Tiền Giang</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-xs-6">
+                        <div class="dropdown custom-select">
+                          <input type="hidden" id="dictricts" name=""/>
+                          <button type="button" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Dictricts</span><span class="arrow"></span></button>
+                          <ul aria-labelledby="type-project" class="dropdown-menu">
+                            <li><a href="" data-value="0">0</a></li>
+                            <li><a href="" data-value="1">1</a></li>
+                            <li><a href="" data-value="2">2</a></li>
+                            <li><a href="" data-value="3">3</a></li>
+                            <li><a href="" data-value="4">4</a></li>
+                            <li><a href="" data-value="5">5</a></li>
+                            <li><a href="" data-value="6">6</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Country</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder="Country" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group text-right">
+                  <div class="col-xs-12">
+                    <label for="company" class="custom-checkbox">
+                      <input type="radio" name="jod" id="company"/><span class="mark"></span><span class="text">Company</span>
+                    </label>
+                    <label for="freelancer" class="custom-checkbox">
+                      <input type="radio" name="jod" id="freelancer"/><span class="mark"></span><span class="text">Freelancer</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group accept-bottom">
+                  <label for="frist-name" class="col-xs-2 control-label"></label>
+                  <div class="col-xs-10">
+                    <label for="ok" class="custom-checkbox">
+                      <input type="checkbox" name="ok" id="ok"/><span class="mark"></span><span class="text">I accept ESTA's Terms of Use and Privacy Policy.</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="submit-button text-center">
+                  <button type="submit" class="esta-button btn medium">Sign up</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade model-custom">
+      <div role="document" class="modal-dialog">
+        <div style="width: 650px" class="modal-content"><span aria-hidden="true" data-dismiss="modal" class="close-popup"></span>
+          <div class="modal-body">
+            <h3 class="title-model">SIGN IN</h3>
+            <form class="form-horizontal custom-from">
+              <div class="form-block">
+                <div class="form-group has-error">
+                  <label for="frist-name" class="col-xs-2 control-label">First name</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder=" * This info can't be blank" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="frist-name" class="col-xs-2 control-label">Password</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder="Password" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group text-left checkbox-left">
+                  <div class="col-xs-10 col-xs-push-2">
+                    <label for="company" class="custom-checkbox">
+                      <input type="radio" name="jod" id="company"/><span class="mark"></span><span class="text">Remember me</span>
+                    </label><a href="" data-toggle="modal" data-target="#forgot" aria-hidden="true" data-dismiss="modal" class="text-danger link-forgot-pass">Forgot password</a>
+                  </div>
+                </div>
+                <div class="form-group submit-button text-center">
+                  <button type="submit" class="esta-button btn medium">Sign in</button>
+                </div>
+                <div class="text-center">Don't have an account?<a href="" data-toggle="modal" data-target="#logup" aria-hidden="true" data-dismiss="modal" class="text-danger"><b> Sign up</b></a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="forgot" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade model-custom">
+      <div role="document" class="modal-dialog">
+        <div style="width: 650px" class="modal-content"><span aria-hidden="true" data-dismiss="modal" class="close-popup"></span>
+          <div class="modal-body">
+            <form id="reset_pass" class="form-horizontal custom-from">
+              <div class="intro-form text-center">
+                <h3 class="title-center">Reset your Password</h3>
+                <div class="text-intro">Enter the email address associated with your account, and we'll email you a link to reset your password.</div>
+              </div>
+              <div class="form-block">
+                <div class="form-group has-error">
+                  <label for="frist-name" class="col-xs-2 control-label">Email</label>
+                  <div class="col-xs-10">
+                    <input type="email" id="frist-name" placeholder=" * This info can't be blank" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group submit-button text-center">
+                  <button type="submit" class="esta-button btn medium">Send reset link</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

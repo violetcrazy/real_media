@@ -1,0 +1,985 @@
+<!DOCTYPE HTML>
+<html>
+  <title>Home page title</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <script type="text/javascript" src="asset/js/jquery.js"></script>
+  <script type="text/javascript" src="asset/js/bootstrap.js"></script>
+  <script type="text/javascript" src="asset/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src="asset/js/jquery.nivo.slider.js"></script>
+  <script type="text/javascript" src="asset/js/global.js"></script>
+  <body>
+    <div class="header header-site">
+      <div class="container">
+        <div class="logo pull-left"><a><img src="asset/img/logo.png" alt=""></a></div>
+        <div class="main-menu pull-right">
+          <div class="wrap-menu">
+            <ul class="menu">
+              <li><a href="" class="active">Project</a></li>
+              <li><a href="">Buy</a></li>
+              <li><a href="">Rent</a></li>
+              <li><a href="">EXTRA SERVICE</a></li>
+              <li><a href="">FIND AGENT</a></li>
+              <li><a href="">NEWS</a></li>
+              <li><a href="">MORE</a>
+                <ul class="sub-menu">
+                  <li><a href="">Project</a></li>
+                  <li><a href="">Buy</a></li>
+                  <li><a href="">Rent</a></li>
+                  <li><a href="">Extra Service</a></li>
+                  <li><a href="">Find Agent</a></li>
+                  <li><a href="">News</a></li>
+                  <li><a href="">More</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="search-home block-search">
+      <div class="container">
+        <form>
+          <div class="item">
+                  <div class="dropdown custom-select">
+                    <input type="hidden" name="type-project">
+                    <button type="button" id="type-project" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Buy</span><span class="arrow"></span></button>
+                    <ul aria-labelledby="type-project" class="dropdown-menu">
+                      <li><a href="" data-value="1">Buy</a></li>
+                      <li><a href="" data-value="2">Any</a></li>
+                      <li><a href="" data-value="3">Buy for Living</a></li>
+                      <li><a href="" data-value="4">Buy for Investment</a></li>
+                      <li><a href="" data-value="5">Rent</a></li>
+                    </ul>
+                  </div>
+          </div>
+          <div class="item">
+                  <div class="dropdown custom-select">
+                    <input type="hidden" name="location">
+                    <button type="button" id="location" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Location</span><span class="arrow"></span></button>
+                    <ul aria-labelledby="type-project" class="dropdown-menu">
+                      <li><a href="" data-value="1">Any</a></li>
+                      <li class="has-sub"><a href="" data-value="2">HOCHIMINH CITY</a>
+                        <ul class="sub-select">
+                          <li><a href="" data-value="HCMC - Vihomes Central Park">HCMC - Vihomes Central Park</a></li>
+                          <li><a href="" data-value="HCMC - Vinhomes Dong Khoi">HCMC - Vinhomes Dong Khoi</a></li>
+                          <li><a href="" data-value="HCMC - Vinhomes Royal City">HCMC - Vinhomes Royal City</a></li>
+                          <li><a href="" data-value="HCMC - Vihomes Ba Son">HCMC - Vihomes Ba Son</a></li>
+                          <li><a href="" data-value="HCMC - Vinhomes Khanh Hoi">HCMC - Vinhomes Khanh Hoi</a></li>
+                          <li><a href="" data-value="HCMC - Vinhomes Can Gio">HCMC - Vinhomes Can Gio</a></li>
+                          <li><a href="" data-value="HCMC - Vinhomes District 9">HCMC - Vinhomes District 9</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-sub"><a href="" data-value="3">HANOI</a>
+                        <ul class="sub-select">
+                          <li><a href="" data-value="HANOI - Vinhomes Time City Park Hill">HANOI - Vinhomes Time City Park Hill</a></li>
+                          <li><a href="" data-value="HANOI - Vinhomes Nguyen Chi Thanh">HANOI - Vinhomes Nguyen Chi Thanh</a></li>
+                          <li><a href="" data-value="HANOI - Vinhomes Riverside">HANOI - Vinhomes Riverside</a></li>
+                          <li><a href="" data-value="HANOI - Vinhomes Tran Duy Hung">HANOI - Vinhomes Tran Duy Hung</a></li>
+                          <li><a href="" data-value="HANOI - Vinhomes Cao Xa La">HANOI - Vinhomes Cao Xa La</a></li>
+                          <li><a href="" data-value="HANOI - Vinhomes Green City">HANOI - Vinhomes Green City</a></li>
+                          <li><a href="" data-value="HANOI - Vinhomes Lieu Giai">HANOI - Vinhomes Lieu Giai</a></li>
+                        </ul>
+                      </li>
+                      <li class="has-sub"><a href="" data-value="4">HAI PHONG</a>
+                        <ul class="sub-select">
+                          <li><a href="" data-value="HAI PHONG - Vincom Hai Phong">HAI PHONG - Vincom Hai Phong</a></li>
+                          <li><a href="" data-value="HAI PHONG - Vinhomes Riverside">HAI PHONG - Vinhomes Riverside</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="" data-value="5">HA TINH - Vinhomes Ha Tinh</a></li>
+                      <li><a href="" data-value="6">BAC NINH - Vinhome Bac Ninh</a></li>
+                      <li><a href="" data-value="7">HA NAM - Vincom Ha Nam</a></li>
+                      <li><a href="" data-value="8">NAM DINH - Vincom Nam Dinh</a></li>
+                      <li><a href="" data-value="9">THAI BINH - Vincom Thai Binh</a></li>
+                      <li><a href="" data-value="10">LAO CAI - Vincom Lao Cai</a></li>
+                      <li><a href="" data-value="11">YEN BAI - Vincom Yen Bai</a></li>
+                      <li><a href="" data-value="12">HAI DUONG - Vincom Hai Duong</a></li>
+                      <li><a href="" data-value="13">QUANG NINH - Eco Villas Quang Ninh</a></li>
+                      <li class="has-sub"><a href="" data-value="14">DANANG</a>
+                        <ul class="sub-select">
+                          <li><a href="" data-value="DANANG - Vinpearl Danang">DANANG - Vinpearl Danang</a></li>
+                          <li><a href="" data-value="DANANG - Vinpearl Danang">DANANG - Vinpearl Danang</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="" data-value="15">KHANH HOA</a></li>
+                      <li><a href="" data-value="16">KIEN GIANG - Vinpearl Phu Quoc</a></li>
+                    </ul>
+                  </div>
+          </div>
+          <div class="item">
+                  <div class="dropdown custom-select">
+                    <input type="hidden" name="adults">
+                    <button type="button" id="adults" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Adults</span><span class="arrow"></span></button>
+                    <ul aria-labelledby="type-project" class="dropdown-menu">
+                      <li><a href="" data-value="0">Any</a></li>
+                      <li><a href="" data-value="1">1 adults</a></li>
+                      <li><a href="" data-value="3">3 adults</a></li>
+                      <li><a href="" data-value="5">5 adults</a></li>
+                    </ul>
+                  </div>
+          </div>
+          <div class="item">
+                  <div class="dropdown custom-select">
+                    <input type="hidden" name="children">
+                    <button type="button" id="children" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Children</span><span class="arrow"></span></button>
+                    <ul aria-labelledby="type-project" class="dropdown-menu">
+                      <li><a href="" data-value="0">Any</a></li>
+                      <li><a href="" data-value="1">1 children</a></li>
+                      <li><a href="" data-value="3">3 children</a></li>
+                      <li><a href="" data-value="5">5 children</a></li>
+                    </ul>
+                  </div>
+          </div>
+          <div class="item">
+                  <div class="dropdown custom-select">
+                    <input type="hidden" name="price">
+                    <button type="button" id="price" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-default btn-block dropdown-toggle"><span class="text">Price</span><span class="arrow"></span></button>
+                    <ul aria-labelledby="type-project" class="dropdown-menu">
+                      <li><a href="" data-value="1">Any</a></li>
+                      <li><a href="" data-value="2">&lt; $200,000</a></li>
+                      <li><a href="" data-value="3">$200,000 - $300,000</a></li>
+                      <li><a href="" data-value="4">$300,000 - $400,000</a></li>
+                      <li><a href="" data-value="5">$400,000 - $500,000</a></li>
+                      <li><a href="" data-value="6">$500,000 - $600,000</a></li>
+                      <li><a href="" data-value="7">$600,000 - $700,000</a></li>
+                      <li><a href="" data-value="8">$700,000 - $800,000</a></li>
+                      <li><a href="" data-value="9">$900,000 - $1,000,000</a></li>
+                      <li><a href="" data-value="10">&gt; $1,000,0000</a></li>
+                    </ul>
+                  </div>
+          </div>
+          <div class="item action-submit">
+            <button type="submit" class="esta-button">Search</button>
+          </div>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+    <div class="row-section odd m-t-60">
+      <div class="container">
+        <h2 class="title-block">POPULAR APARTMENTSv</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view1.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view1.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view5.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view5.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section">
+      <div class="container">
+        <h2 class="title-block">NEW LISTINGS</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2-2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/item-2-2.png)" class="fixframe thumb"><img src="asset/img/data-example/item-2-2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section odd">
+      <div class="container">
+        <h2 class="title-block">best view</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view1.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view1.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view5.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view5.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section">
+      <div class="container">
+        <div class="banner-random m-b-50"><a href=""><img src="asset/img/banner/banner-full.png" alt=""></a></div>
+        <h2 class="title-block">UNDER $200,000</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item1-2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/under1.png)" class="fixframe thumb"><img src="asset/img/data-example/under1.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/under2.png)" class="fixframe thumb"><img src="asset/img/data-example/under2.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/under3.png)" class="fixframe thumb"><img src="asset/img/data-example/under3.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/under3.png)" class="fixframe thumb"><img src="asset/img/data-example/under3.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/under4.png)" class="fixframe thumb"><img src="asset/img/data-example/under4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/under5.png)" class="fixframe thumb"><img src="asset/img/data-example/under5.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section odd">
+      <div class="container">
+        <h2 class="title-block">FURNISHED APARTMENTS</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2-2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/item-2-2.png)" class="fixframe thumb"><img src="asset/img/data-example/item-2-2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section">
+      <div class="container">
+        <div class="banner-random m-b-50"><a href=""><img src="asset/img/banner/banner-full-1.png" alt=""></a></div>
+        <h2 class="title-block">UNFURNISHED APARTMENTS</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view1.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view1.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view5.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view5.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section odd">
+      <div class="container">
+        <h2 class="title-block">PENTHOUSES</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view1.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view1.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view5.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view5.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-section">
+      <div class="container">
+        <div class="banner-random m-b-50"><a href=""><img src="asset/img/banner/banner-full-2.png" alt=""></a></div>
+        <h2 class="title-block">VILLAS</h2>
+        <div class="list-post2">
+          <div class="row-2">
+            <div class="item item2-2">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/item-2-2.png)" class="fixframe thumb"><img src="asset/img/data-example/item-2-2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view2.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view2.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view3.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view3.png"></div>
+                          <div class="favorite"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+                    <div class="entry"><a href="">
+                        <div class="image-item">
+                          <div style="background-image: url(asset/img/data-example/best-view4.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view4.png"></div>
+                          <div class="favorite active"></div>
+                          <div class="caption">
+                            <div class="price">$100,000</div>
+                            <div class="address">Timies City, Dist 7, HCMC</div>
+                            <div class="info-small">
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-orientation-icon.png"></span>SE</div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-size.png"></span>50m<sup>2</sup></div>
+                              <div class="line-icon"><span class="icon"><img src="asset/img/icon/ic-bed.png"></span>2bd</div>
+                            </div>
+                          </div>
+                        </div></a></div>
+            </div>
+            <div class="item item1">
+              <div class="entry">
+                <div class="image-item">
+                  <div style="background-image: url(asset/img/data-example/best-view6.png)" class="fixframe thumb"><img src="asset/img/data-example/best-view6.png"></div>
+                  <div class="counter">
+                    <div class="text">+100</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-site">
+      <div class="container">
+        <div class="row address">
+          <div class="col-xs-4">
+            <div class="entry">
+              <div class="title">HOCHIMINH CITY</div>
+              <div class="des">Topaz 1 Building, 92 Nguyen Huu Canh, Ward 22, Binh Thanh Dist., HCMC</div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="entry">
+              <div class="title">HANOI</div>
+              <div class="des">R4 Building, Royal City Residence, 72A Nguyen Trai, Thanh Xuan Dist., Hanoi</div>
+            </div>
+          </div>
+          <div class="col-xs-4">
+            <div class="entry phone">
+              <div><b>TEL :</b> +(84) 8 6689 3838</div>
+              <div><b>HCMC :</b> +(84) 93 996 07 07</div>
+              <div><b>HANOI :</b> +(84) 983 1111 02</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="text-center">
+            <div class="title">folow us</div>
+            <div class="social"><a href="#" class="facebook"><img src="asset/img/icon/ic-facebook.png"></a><a href="#" class="google"><img src="asset/img/icon/ic-google.png"></a><a href="#" class="twiter"><img src="asset/img/icon/ic-twiter.png"></a></div>
+            <div class="copyright">Copyright Esta 2015 All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

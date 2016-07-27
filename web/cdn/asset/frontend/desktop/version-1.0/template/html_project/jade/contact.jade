@@ -1,0 +1,41 @@
+extends user_template.jade
+block content
+    div.container.m-t-30.m-b-30
+        h2.title-block.title-page Contact
+        
+        div.row
+            .col-xs-6
+                form.form-contact
+                    div.form-group
+                        small Tên
+                        input.form-control
+                    div.form-group
+                        small Email
+                        input.form-control
+                    div.form-group
+                        small Tiêu đề
+                        input.form-control
+                    div.form-group
+                        small Nội dung
+                        textarea.form-control(placeholder="Nội dung", cols="4")
+                    p.clearfix
+                    div.action-bottom.text-center
+                        button.btn.esta-button(type="submit") Gửi
+                        button.btn.esta-button.dis(type="submit") Hủy
+                        
+            .col-xs-5.col-xs-push-1
+                p.m-t-15
+                    b.text-danger HANOI  
+                    br
+                    |R4 Building, Royal City Residence, 
+                    br
+                    |72A Nguyen Trai, Thanh Xuan Dist., Hanoi
+                hr
+                p
+                    b.text-danger HOCHIMINH CITY
+                    br
+                    |Topaz 1 Building, 92 Nguyen Huu Canh,
+                    br
+                    |Ward 22, Binh Thanh Dist., HCMC  
+                hr
+                p: <b class="text-danger"> TEL:</b> +(84) 8 6689 3838 <br> <b class="text-danger"> HCMC: </b>  +(84) 93 996 07 07  <br> <b class="text-danger"> HANOI: </b> +(84) 983 1111 02

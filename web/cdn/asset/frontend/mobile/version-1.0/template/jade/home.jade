@@ -1,0 +1,93 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.slider-home
+        div.entry-slider(style="background-image: url(asset/img/data-example/slider-home.jpg)")
+            form.form-search
+                select.custom(name="")
+                    option(value="1") Buy
+                    option(value="2") Any
+                select.custom(name="")
+                    option(value="1") Location
+                    option(value="2") Any
+                select.custom(name="")
+                    option(value="1") Adults
+                    option(value="2") Any
+                select.custom(name="")
+                    option(value="1") Children
+                    option(value="2") Any
+                select.custom(name="")
+                    option(value="1") Price
+                    option(value="2") Any
+                div.action-button
+                    button.esta-button.text-center.block(type="submit") Search
+
+    div.block-articles
+        h2.title-style1.text-center project
+        div.list-style1
+            div.item
+                div.entry
+                    div.thumbnail
+                        +thumbBg('p1.jpg')
+                        div.caption
+                            h3.title Lorem ipsum dolor sit amet.
+                            h3.location Hồ Chí Minh
+            div.item
+                div.entry
+                    div.thumbnail
+                        +thumbBg('p2.jpg')
+                        div.caption
+                            h3.title Lorem ipsum dolor sit amet.
+                            h3.location Hồ Chí Minh
+            div.item
+                div.entry
+                    div.thumbnail
+                        +thumbBg('p3.jpg')
+                        div.caption
+                            h3.title Lorem ipsum dolor sit amet.
+                            h3.location Hồ Chí Minh
+            div.link-more.text-center
+                a(href="", class="link") See more
+
+    div.block-articles.bg-grey
+        h2.title-style1.text-center BEST VIEW
+        div.list-style2
+            div.item
+                div.entry
+                    div.thumbnail
+                        +thumbBg('p1.jpg')
+                        div.caption
+                            .price $ 3.000.000
+                            .block-right
+                                .address 989 Trần Quang Khải, p.9, q.1
+                                .des
+                                    span.item Đông Bắc
+                                    span.item 50m <sup>2</sup>
+                                    span.item 2 Phòng ngủ
+            div.item
+                div.entry
+                    div.thumbnail
+                        +thumbBg('p2.jpg')
+                        div.caption
+                            .price $ 3.000.000
+                            .block-right
+                                .address 989 Trần Quang Khải, p.9, q.1
+                                .des
+                                    span.item Đông Bắc
+                                    span.item 50m <sup>2</sup>
+                                    span.item 2 Phòng ngủ
+            div.item
+                div.entry
+                    div.thumbnail
+                        +thumbBg('p3.jpg')
+                        div.caption
+                            .price $ 3.000.000
+                            .block-right
+                                .address 989 Trần Quang Khải, p.9, q.1
+                                .des
+                                    span.item Đông Bắc
+                                    span.item 50m <sup>2</sup>
+                                    span.item 2 Phòng ngủ
+            div.link-more.text-center
+                a(href="", class="link") See more

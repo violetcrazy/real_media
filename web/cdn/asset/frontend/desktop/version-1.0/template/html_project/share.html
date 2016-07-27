@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+
+</head>
+<body>
+    <div id="fb-root"></div>
+<script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=665201730210206";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script type="text/javascript">
+    $(document).on('click','.send', function(e){
+            e.preventDefault();
+            FB.ui({
+                method: 'send',
+                link: 'https://muabannhanh.com',
+                to: '100002974712161'
+            });
+        });
+</script>
+<p>
+    <a href="" class="btn-send send">Gửi tin nhắn FaceBook cho Minh</a>
+</p>
+
+<div class="wrap-chat">
+    <div class="header-chat">
+        Chat với ABC XYZ
+        <span class="close"> - </span>
+    </div>
+    <div class="fb-page" data-tabs="messages" data-href="https://www.facebook.com/Áo-Dài-Việt-Nam-Lê-Vy-1439479589613201/" data-width="300" data-height="400" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false" data-show-posts="false"></div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.header-chat').click(function(){
+            $(this).closest('.wrap-chat').toggleClass('active');
+        });
+    });
+</script>
+<style type="text/css" media="screen">
+    .wrap-chat{
+        position:fixed;
+        z-index:9999999;
+        right:00px;
+        bottom:-0;
+        width: 300px;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 0 7px rgba(0,0,0,0.4);
+        -webkit-transition: all 0.25s;
+        -o-transition: all 0.25s;
+        transition: all 0.25s;
+    }
+    .wrap-chat.active{
+        bottom: -400px;
+
+    }
+    .wrap-chat.active .close{
+        display: none;
+    }
+    .header-chat{
+        background-color: #4caf50;
+        color: #fff;
+        padding: 7px 10px;
+        border-radius: 5px 5px 0 0;
+        position: relative;
+        height: 25px;
+        cursor: pointer;
+    }
+    .close{
+        display: block;
+       color: #dddddd;
+       position: absolute;
+       right: 0px;
+       bottom: 0px;
+       top: 0px;
+       width: 40px;
+       line-height: 25px;
+       font-weight: bold;
+       font-size: 36px;
+       text-align: center;
+       cursor: pointer;
+    }
+</style>
+</body>
+</html>

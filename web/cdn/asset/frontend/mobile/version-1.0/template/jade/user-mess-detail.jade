@@ -1,0 +1,23 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.main-content
+        div.detail-mess
+            div.header-mess
+                div.avatar
+                    img(src="asset/img/data-example/avatar.png", alt="")
+                div.summary
+                    div.name: b Đinh Mạnh Cường
+                    div: small gửi đến tôi
+                div.block-link
+                    a.prev(href="")
+                    a.next(href="")
+            .content
+                p: b Chủ đề mail
+                p content content content content content content content content content content  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et accusamus consectetur at a inventore. Culpa omnis repellendus unde aliquam, laboriosam pariatur ipsam aliquid quis esse asperiores quae debitis libero accusamus voluptatum ipsa eos delectus perspiciatis reiciendis. Distinctio tempore, recusandae architecto a necessitatibus harum perspiciatis reiciendis praesentium atque fugiat, laudantium eaque.
+
+            div.action-bottom.m-t-10.m-b-10
+                a.link-action.esta-button.block.btn-small.text-center(href="") Trả lời
+                br
+                a.link-action.esta-button.dis.block.btn-small.text-center(href="") Xóa

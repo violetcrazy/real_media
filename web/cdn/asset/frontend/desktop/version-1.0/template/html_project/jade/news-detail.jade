@@ -1,0 +1,53 @@
+extends default.jade
+include element/mixin.jade
+
+block title
+    News Detail
+
+block content
+    div.block-search.search-home
+        include element/search.jade
+
+    +breadcrumbs(['News','Lastest', 'VIBRANT NHA TRANG REAL ESTATE MARKET LOREM '])
+
+    div.container
+        
+        div.row.m-b-30
+            div.col-xs-8
+                .news-detail
+                    h1.title Vibrant Nha Trang real estate market
+                    div.author Author: <b>Pham Phuong Thao</b>
+                    div.date: i On 5:00pm, 20/11/2015
+                    div.wysiwyg
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                         |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, a.
+                        
+            div.col-xs-4
+                .entry.sidebar-news-detail
+                    h2.title-block.title-page POPULAR NEWS
+                    div.list-news
+                        ul.list-unstyled
+                            li.item
+                                a(href="")
+                                    img(src="asset/img/data-example/apartment4.png", alt="")
+                                    h3.title Lorem ipsum dolor sit.
+                            li.item
+                                a(href="")
+                                    img(src="asset/img/data-example/apartment4.png", alt="")
+                                    h3.title Lorem ipsum dolor sit.
+                            li.item
+                                a(href="")
+                                    img(src="asset/img/data-example/apartment4.png", alt="")
+                                    h3.title Lorem ipsum dolor sit.
+                        div.bottom.text-center
+                            a.btn.esta-button Xem thêm
+            div.clearfix
+            
+                

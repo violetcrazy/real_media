@@ -1,0 +1,183 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block js_header
+    script(type="text/javascript", src="asset/js/search-filter.js")
+
+block content
+    div.block-header-tab.layout-2
+        a.item(href="search.html") Kết quả
+        a.active.item Bộ lọc
+        div.clearfix
+    div.wrap-list
+        div.box-widget.module-search.m-t-15
+            div.content-widget
+                div.title-filter
+                    |Usage Purpose
+                    span.arrow
+                .entry-filter.filter-multiple
+                    +customCheckbox({id: 'purpose-1', text: 'Chính sách ưu đãi'})
+                    +customCheckbox({id: 'purpose-2', text: 'Hot Apartments'})
+                    +customCheckbox({id: 'purpose-3', text: 'Special Deals'})
+                    +customCheckbox({id: 'purpose-4', text: 'New Listings'})
+                    +customCheckbox({id: 'purpose-5', text: 'Dễ cho thuê'})
+                    +customCheckbox({id: 'purpose-6', text: 'Dễ bán'})
+                    +customCheckbox({id: 'purpose-7', text: 'Gia đình có người đau ốm'})
+                    +customCheckbox({id: 'purpose-8', text: 'Kid friendly'})
+                    +customCheckbox({id: 'purpose-9', text: 'Pet friendly'})
+                    +customCheckbox({id: 'purpose-10', text: 'Yên tĩnh'})
+                    +customCheckbox({id: 'purpose-11', text: 'Náo nhiệt'})
+                    +customCheckbox({id: 'purpose-12', text: 'Nghỉ dưỡng'})
+                    +customCheckbox({id: 'purpose-13', text: 'Không gian cây xanh'})
+                    +customCheckbox({id: 'purpose-14', text: 'An ninh tốt'})
+                    +customCheckbox({id: 'purpose-15', text: 'Gần trung tâm'})
+                    +customCheckbox({id: 'purpose-16', text: 'Thuận tiện giao thông'})
+                div.title-filter
+                    |Property Types
+                    span.arrow
+
+                .entry-filter.filter-multiple
+                    .filter-multiple
+                        ul.list-unstyled
+                            li.parent.active
+                                div.entry-item
+                                    span.icon
+                                    span.text Apartment
+                                ul.sub-list.list-unstyled
+                                    li: +customCheckbox({id: '1bedroom', text: '1 bedroom'})
+                                    li: +customCheckbox({id: '2bedroom', text: '2 bedroom'})
+                                    li: +customCheckbox({id: '3bedroom', text: '3 bedroom'})
+                                    li: +customCheckbox({id: '4bedroom', text: '4 bedroom'})
+                            li
+                                +customCheckbox({id: 'property-types', text: 'Duplex'})
+                            li
+                                +customCheckbox({id: 'corner-apartment', text: 'Corner Apartment'})
+                            li
+                                +customCheckbox({id: 'Penthouse', text: 'Penthouse'})
+                            li
+                                +customCheckbox({id: 'Studio', text: 'Studio'})
+                            li
+                                +customCheckbox({id: 'Villa', text: 'Villa'})
+                            li
+                                +customCheckbox({id: 'Beach-Villa', text: 'Beach Villa'})
+                            li
+                                +customCheckbox({id: 'Beach-House', text: 'Beach House'})
+                            li
+                                +customCheckbox({id: 'Detached-House', text: 'Detached House'})
+                            li
+                                +customCheckbox({id: 'Semi-detached-House', text: 'Semi-detached House'})
+                            li
+                                +customCheckbox({id: 'Officetel', text: 'Officetel'})
+                            li.parent
+                                div.entry-item
+                                    span.icon
+                                    span.text Smart Home
+                                ul.secondary-list.list-unstyled
+                                    li
+                                        +customCheckboxClose({id: 'escs', text: 'Energy Saving Control System'})
+                                        ul.sub-list.list-unstyled
+                                            li: +customCheckbox({id: 'fdl', text: 'Fingerprint Door Lock'})
+                                            li: +customCheckbox({id: 'ad', text: 'Automated Drapery &'})
+                                            li: +customCheckbox({id: 'wo', text: 'Window Openers '})
+                                            li: +customCheckbox({id: 'dsf', text: 'Double Sided Fireplace'})
+                                    li
+                                        +customCheckboxClose({id: '_2bedroom', text: 'Entertaining Control System'})
+                                        ul.sub-list.list-unstyled
+                                            li: +customCheckbox({id: 'sys1', text: 'Điều khiển TV'})
+                                            li: +customCheckbox({id: 'sys2', text: 'Điều khiển loa'})
+
+                                    li
+                                        +customCheckboxClose({id: '_3bedroom', text: 'Hệ thống kiểm soát môi trường'})
+                                        ul.sub-list.list-unstyled
+                                            li: +customCheckbox({id: 'mt1', text: 'Hệ thống tưới nước sân vườn'})
+                                            li: +customCheckbox({id: 'mt2', text: 'Hệ thống đèn chiếu sáng'})
+                                            li: +customCheckbox({id: 'mt3', text: 'Auto Temperature'})
+                                    li
+                                        +customCheckboxClose({id: '_4bedroom', text: 'Hệ thống an ninh'})
+                                        ul.sub-list.list-unstyled
+                                            li: +customCheckbox({id: 'an-ninh1', text: 'Camera an ninh tự động'})
+                                            li: +customCheckbox({id: 'an-ninh2', text: 'Hệ thống báo rò rỉ khí Gas'})
+                                            li: +customCheckbox({id: 'an-ninh3', text: 'Cảm biến nhiệt'})
+                                            li: +customCheckbox({id: 'an-ninh4', text: 'Cảm biến khói'})
+                                            li: +customCheckbox({id: 'an-ninh5', text: 'Thiết bị báo cháy nổ'})
+                                            li: +customCheckbox({id: 'an-ninh6', text: 'Dịch vụ đi kèm'})
+                                            li: +customCheckbox({id: 'an-ninh7', text: 'Hệ thống chăm sóc vật nuôi'})
+                div.title-filter
+                    |Property Position
+                    span.arrow
+                .entry-filter.filter-multiple
+                    ul.list-unstyled
+                        li.parent.active
+                            div.entry-item
+                                span.icon
+                                span.text View
+                            ul.sub-list.list-unstyled
+                                li: +customCheckbox({id: 'sea-view', text: 'Sea view'})
+                                li: +customCheckbox({id: 'river-view', text: 'River view'})
+                                li: +customCheckbox({id: 'lake-view', text: 'Lake view'})
+                                li: +customCheckbox({id: 'pool-view', text: 'Pool view'})
+                                li: +customCheckbox({id: 'park-view', text: 'Park view'})
+                                li: +customCheckbox({id: 'graden-view', text: 'Garden view'})
+                                li: +customCheckbox({id: 'golf-view', text: 'Golf view'})
+                                li: +customCheckbox({id: 'city-view', text: 'City view'})
+                                li: +customCheckbox({id: 'sunrise-view', text: 'Sunrise view'})
+                                li: +customCheckbox({id: 'sunset-view', text: 'Sunset view'})
+                        li.parent.active
+                            div.entry-item
+                                span.icon
+                                span.text Auto Feng Shui
+                            ul.sub-list.list-unstyled
+                                li: div.select-field
+                                    - var list = {1992 : {text: "1992"} ,1995 : {text: "1995"} ,2000 : {text: "2000"}}
+                                    +customSelect(list)
+                                li: div.select-field
+                                    - var list = {1 : {text: "Male"} ,2 : {text: "Female"}}
+                                    +customSelect(list)
+                        li.parent.active
+                            div.entry-item
+                                span.icon
+                                span.text Orientation
+                            ul.sub-list.list-unstyled
+                                li: +customCheckbox({id: 'sea-view', text: 'Sea view'})
+                                li: +customCheckbox({id: 'East', text: 'East'})
+                                li: +customCheckbox({id: 'South-East', text: 'South East'})
+                                li: +customCheckbox({id: 'South', text: 'South'})
+                                li: +customCheckbox({id: 'South-West', text: 'South West'})
+                                li: +customCheckbox({id: 'West', text: 'West'})
+                                li: +customCheckbox({id: 'North-West', text: 'North West'})
+                                li: +customCheckbox({id: 'North', text: 'North'})
+                                li: +customCheckbox({id: 'North-East', text: 'North East'})
+
+                        li.parent.active
+                            div.entry-item
+                                span.icon
+                                span.text Floor
+                            ul.sub-list.list-unstyled
+                                li: div.input-field
+                                    input(type="text" class="esta-input")
+
+                div.title-filter
+                    |Project Utilities
+                    span.arrow
+                .entry-filter.filter-multiple
+                    +customCheckbox({id: 'project-utilities-1', text: 'Span'})
+                    +customCheckbox({id: 'project-utilities-2', text: 'Gym'})
+                    +customCheckbox({id: 'project-utilities-3', text: 'Swimming pool'})
+                    +customCheckbox({id: 'project-utilities-4', text: 'Park'})
+                    +customCheckbox({id: 'project-utilities-5', text: 'Water Park'})
+                    +customCheckbox({id: 'project-utilities-6', text: 'Playground'})
+                    +customCheckbox({id: 'project-utilities-7', text: 'Amusement Park'})
+                    +customCheckbox({id: 'project-utilities-8', text: 'Restaurant'})
+                    +customCheckbox({id: 'project-utilities-9', text: 'Supermarket'})
+                    +customCheckbox({id: 'project-utilities-10', text: 'Mall'})
+                    +customCheckbox({id: 'project-utilities-11', text: 'Pet area'})
+                    +customCheckbox({id: 'project-utilities-12', text: 'Golf Course'})
+                    +customCheckbox({id: 'project-utilities-13', text: 'Tennis Court'})
+                    +customCheckbox({id: 'project-utilities-14', text: 'Walking Path'})
+                    +customCheckbox({id: 'project-utilities-15', text: 'Cleaning service'})
+                    +customCheckbox({id: 'project-utilities-16', text: 'Maintenance service'})
+                    +customCheckbox({id: 'project-utilities-17', text: 'BBQ'})
+                    +customCheckbox({id: 'project-utilities-18', text: 'Unfurnished Homes'})
+                    +customCheckbox({id: 'project-utilities-19', text: 'Partly Funished Homes'})
+                    +customCheckbox({id: 'project-utilities-20', text: 'Fully Furnished Homes'})
+                    +customCheckbox({id: 'project-utilities-21', text: 'Other Utilities'})

@@ -1,0 +1,112 @@
+mixin customSelect(data, list)
+    .dropdown.custom-select
+        if  typeof data[2] != undefined
+            input(type="hidden", id="#{data[2]}", name="#{data[0]}")
+        else
+            input(type="hidden", id="", name="#{data[0]}")
+
+        button.btn.btn-default.btn-block.dropdown-toggle(type="button", id="#{data[0]}", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+            span.text #{data[1]}
+            span.arrow
+        ul.dropdown-menu(aria-labelledby="type-project")
+            each val, index in list
+                if val.sub
+                    li.has-sub
+                        a(href="", data-value="#{index}") #{val.parent}
+                        ul.sub-select
+                            each Sval, Sindex in val.sub
+                                li: a(href="", data-value="#{Sval}") #{Sval}
+                else
+                    li: a(href="", data-value="#{index}") #{val.parent}
+
+mixin customSelectLink(data, list)
+    .dropdown.custom-select.menu
+        input(type="hidden", name="#{data[0]}")
+        button.btn.btn-default.btn-block.dropdown-toggle(type="button", id="#{data[0]}", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false")
+            span.text #{data[1]}
+            span.arrow
+        ul.dropdown-menu(aria-labelledby="type-project")
+            each val, index in list
+                if val.sub
+                    li.has-sub
+                        a(href="", data-value="#{index}") #{val.parent}
+                        ul.sub-select
+                            each Sval, Sindex in val.sub
+                                li: a(href="", data-value="#{Sval}") #{Sval}
+                else
+                    li: a(href="", data-value="#{index}") #{val.parent}
+
+mixin itemBestView(img)
+    - var active = Math.floor(Math.random() * 2)
+    .entry: a(href="")
+        .image-item
+            .fixframe.thumb(style="background-image: url(#{img})")
+                img(src="#{img}")
+            if active == "1"
+                .favorite.active
+            else
+                .favorite
+            .caption
+                .price 100,000 VND
+                .address Timies City, Dist 7, HCMC
+                .info-small
+                    .line-icon
+                        span.icon: img(src="asset/img/icon/ic-orientation-icon.png")
+                        |Đông - Bắc
+                    .line-icon
+                        span.icon: img(src="asset/img/icon/ic-size.png")
+                        |50m<sup>2</sup>
+                    .line-icon
+                        span.icon: img(src="asset/img/icon/ic-bed.png")
+                        |2bd
+
+mixin breadcrumbs(data)
+    div.breadcrumbs
+        div.container
+            each val, index in data
+                if index === 0
+                    a(href="") #{val}
+                else if index != data.length - 1
+                    span(class="symbol") >
+                    a(href="") #{val}
+                else
+                    span(class="symbol") >
+                    a(href="", class="current") #{val}
+mixin area(data)
+    area(data-id="#{data.id}", data-maphilight='#{data.data_maphilight}',title="#{data.id}" ,shape="#{data.shape}", coords="#{data.coords}")
+
+mixin buildingHead()
+    th
+    - for (var i = 1 ; i <= 20 ; i ++){
+        td #{i}
+    - }
+mixin buildingBody()
+    - for (var i = 1 ; i <= 20 ; i ++){
+        - var temp = Math.floor(Math.random() * 3)
+        td
+            if temp == 0
+                span.aparment.available(data-id="id_#{i}", data-toggle="tooltip", data-placement="top", title="Tooltip on top")
+            else if temp == 1
+                span.aparment.processing(data-id="id_#{i}", data-toggle="tooltip", data-placement="top", title="Tooltip on top")
+            else
+                span.aparment.sold(data-id="id_#{i}", data-toggle="tooltip", data-placement="top", title="Tooltip on top")
+    - }
+mixin customCheckbox(data)
+    label.custom-checkbox(for="#{data.id}")
+        input(type="checkbox", name="#{data.id}", id="#{data.id}")
+        span.mark
+        span.text #{data.text}
+
+mixin customRadioStyleCheckbox(data)
+    label.custom-checkbox(for="#{data.id}")
+        input(type="radio", name="#{data.group}", id="#{data.id}")
+        span.mark
+        span.text #{data.text}
+
+mixin customCheckboxClose(data)
+    label.custom-checkbox(for="#{data.id}")
+        input(type="checkbox", name="#{data.id}", id="#{data.id}")
+        span.mark
+        span.text #{data.text}
+        span.ic-close
+

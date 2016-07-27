@@ -1,0 +1,89 @@
+extends master_template.jade
+include mixin/mixin.jade
+
+block content
+    div.block-header-tab.layout-2
+        a.active.item Đại lý
+        a.item Người dùng
+        div.clearfix
+    div.main-content
+        form.form-custom.m-t-5
+
+            .block-avarta.m-b-20
+                .entry
+                    img.main(src="../asset/img/data-example/agent3.png", alt="")
+                    a(href="")
+                        img.icon(src="asset/img/ic-camera.png", alt="")
+                        |Thay hình đại diện
+
+
+            h1.title-style1 Cài đặt tài khoản
+            div.line-input
+                label Tên
+                input.esta-input(type="text" placeholder="Tên")
+
+            div.line-input.m-t-10
+                label Mật khẩu
+                input.esta-input(type="text" placeholder="Nhập mật khẩu")
+
+            div.line-input.m-t-10
+                label(for="") Tỉnh thành
+                select(name="")
+                    option(value="") Chọn tỉnh thành
+            div.line-input.m-t-10
+                label Sinh nhật
+                div.row-col
+                    .col-xs-4
+                        select(name="")
+                            option(value="") Chọn ngày
+                    .col-xs-4
+                        select(name="")
+                            option(value="") Chọn tháng
+                    .col-xs-4
+                        select(name="")
+                            option(value="") Chọn năm
+
+            div.line-input.m-t-10: div.row-col
+                .col-xs-6
+                    label.custom-checkbox(for="remember")
+                        input(type="checkbox")#remember
+                        span.mark
+                        |Công ty
+                .col-xs-6
+                    label.custom-checkbox(for="remember")
+                        input(type="checkbox")#remember
+                        span.mark
+                        |Tư do
+                .clearfix
+            div.hr.m-t-15.m-b-15
+
+            h1.title-style1 Cài đặt thông báo
+            div.line-input.m-t-10
+                label Lưu kết quả
+                div.row-col
+                    .col-xs-6
+                        label.custom-checkbox(for="remember")
+                            input(type="checkbox")#remember
+                            span.mark
+                            |Mở
+                    .col-xs-6
+                        label.custom-checkbox(for="remember")
+                            input(type="checkbox")#remember
+                            span.mark
+                            |Tắt
+            div.line-input.m-t-10
+                label Tin mới
+                div.row-col
+                    .col-xs-6
+                        label.custom-checkbox(for="remember")
+                            input(type="checkbox")#remember
+                            span.mark
+                            |Mở
+                    .col-xs-6
+                        label.custom-checkbox(for="remember")
+                            input(type="checkbox")#remember
+                            span.mark
+                            |Tắt
+
+            div.action-bottom.m-t-10.m-b-20
+                a.link-action.esta-button.dis.block.btn-small.text-center(href="") Lưu thay đổi

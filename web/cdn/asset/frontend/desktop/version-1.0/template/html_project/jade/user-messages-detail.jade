@@ -1,0 +1,63 @@
+extends user_template.jade
+
+block content
+    div.container.m-t-30.m-b-30
+        div.row
+            div.col-xs-3
+                div.entry-sidebar
+                    div.content-block.sidebar-user
+                        div.avatar
+                            img(src="asset/img/data-example/avatar.png")
+                        div.username DINH MANH C
+                        div.type-user User
+                        ul.menu-user.list-unstyled
+                            li: a(href="") Basic Info
+                            li: a(href="") Purchased Properties
+                            li: a(href="") Saved Homes
+                            li: a(href="") Saved Searchs
+                            li: a.active(href="") Messages
+                            li: a(href="") Settings
+
+            div.col-xs-9.single-user
+                +breadcrumbs(['USER','MESSAGES'])
+
+                h1.title-block MESSAGES
+
+                div.tools-mess.m-b-40
+                    a.line-icon.pull-left.active
+                        .icon: img(src="asset/img/icon/ic-mess-inbox-active.png", alt="")
+                        img.tranparents(src="asset/img/icon/ic-mess-inbox.png", alt="")
+                        |Inbox (1)
+                    a.line-icon.pull-left
+                        .icon: img(src="asset/img/icon/ic-mess-send.png", alt="")
+                        img.tranparents(src="asset/img/icon/ic-mess-send.png", alt="")
+                        |Sent (1)
+                    a.line-icon.pull-left
+                        .icon: img(src="asset/img/icon/ic-mess-trash.png", alt="")
+                        img.tranparents(src="asset/img/icon/ic-mess-trash.png", alt="")
+                        |Trash (1)
+                    a.line-icon.pull-left
+                        .icon: img(src="asset/img/icon/ic-mess-del.png", alt="")
+                        img.tranparents(src="asset/img/icon/ic-mess-del.png", alt="")
+                        |Delete (1)
+                    a.line-icon.pull-right
+                        .icon: img(src="asset/img/icon/ic-mess-setting.png", alt="")
+                        img.tranparents(src="asset/img/icon/ic-mess-setting.png", alt="")
+                        |Settings
+                    .clearfix
+
+                div.messages-detail
+                    div.entry
+                        h3.title First Payment Due
+                        div.box-detail
+                            table
+                                tr
+                                    th
+                                        img.avatar(src="asset/img/data-example/avatar.png", alt="")
+
+                                    td
+                                        div.header-table
+                                            |Đinh Mạnh Cường <br />
+                                            small to me
+                                        div.mess-entry
+                                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia ab debitis qui ullam dolor ex. Assumenda eius, nam incidunt molestiae. Eaque qui rerum doloremque omnis laborum atque ut, distinctio. Maiores quasi voluptate nesciunt, libero.
