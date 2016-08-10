@@ -1,5 +1,5 @@
 <?php
-namespace ITECH\Data\Lib;
+namespace MINI\Data\Lib;
 
 class Util
 {
@@ -36,12 +36,18 @@ class Util
         return false;
     }
 
+    public static function emailValidation($email)
+    {
+        return filter_var($email, FILTER_VALIDATE_EMAIL);
+    }
+
     public static function numberOnly($string)
     {
         return trim(preg_replace('/[^0-9]/', '', $string));
     }
 
-    public static function hashPassword($raw_password) {
+    public static function hashPassword($raw_password)
+    {
         return crypt($raw_password, '$1$' . md5($raw_password) . '$');
     }
 
@@ -292,10 +298,34 @@ class Util
         return md5(uniqid() . time());
     }
 
+    /**
+     * @author Cuong.Bui
+     */
+    public static function remoteFileExists($url)
+    {
+        $curl = curl_init($url);
+        curl_setopt($curl, CURLOPT_NOBODY, true);
+
+        $result = curl_exec($curl);
+
+        $ret = false;
+
+        if ($result !== false) {
+            $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+            if ($statusCode == \MINI\Data\Lib\Constant::STATUS_CODE_SUCCESS) {
+                $ret = true;
+            }
+        }
+
+        curl_close($curl);
+        return $ret;
+    }
+
     public static function curlGet($url, $get = array(), $options = array())
     {
         $url = trim($url);
-        if (!empty($get)) {
+        if (is_array($get) && count($get)) {
             $url .= '?' . http_build_query($get);
         }
 
@@ -320,8 +350,10 @@ class Util
     public static function curlPost($url, $post = array(), $options = array())
     {
         $url = trim($url);
-        if (!empty($post)) {
+        if (is_array($post) && count($post)) {
             $data = http_build_query($post);
+        } else {
+            $data = $post;
         }
 
         $defaults = array(
@@ -340,12 +372,29 @@ class Util
         $ch = curl_init();
         curl_setopt_array($ch, ($options + $defaults));
 
-        if (isset($options['json']) && $options['json'] == true) {
-            curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Content-Length: ' . strlen($data))
-            );
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        return $result;
+    }
+
+    public static function curlPostJson($url, $post = array())
+    {
+        $url = trim($url);
+        if (is_array($post) && count($post)) {
+            $data = json_encode($post);
+        } else {
+            $data = $post;
         }
+
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Content-Length: ' . strlen($data))
+        );
 
         $result = curl_exec($ch);
         curl_close($ch);
@@ -553,7 +602,7 @@ class Util
         return $string;
     }
 
-    public static function getTimeAgo($timestamp)
+    public static function getTimeAgo($timestamp, $template = array())
     {
         if (!is_numeric($timestamp)) {
             return '';
@@ -565,49 +614,43 @@ class Util
             return '';
         }
 
-        // Get Difference between Current Timestamp
-        // and Timestamp of item
-        $difference = $current_timestamp - $timestamp;
+        $value =  ($current_timestamp - $timestamp) / 60;
+        $output = '';
+        switch ($value) {
+            case ($value <= 15): // ít hơn 15 phút
+                $output =  'Vừa ';
+                $output .=  isset($template['type']) ? $template['type'] : 'cập nhật';
+                break;
 
-        // Save the periods in an array
-        $periods = array('giây', 'phút', 'giờ', 'ngày', 'tuần', 'tháng', 'năm');
+            case ($value > 15): // ít hơn 15 phút
 
-        // Save the lengths of each period in another array
-        $lengths = array('60', '60', '24', '7', '4.35', '12');
+                $langs = array('phút', 'giờ', 'ngày', 'tuần', 'tháng', 'năm');
 
-        // The loop below will go through the lengths array
-        // starting at key 0 and incrementing each time the
-        // loop is run
-        // Each time, the $difference variable is divided by the
-        // length being accessed
-        // The loop will stop running once $difference is smaller
-        // than the value of the length being accessed at the time
-        // The aim of this loop is find out how old the item is
-        for ($j = 0; $difference >= $lengths[$j]; $j++) {
-            $difference /= $lengths[$j];
+                $chunks = array(
+                    array( 60 * 24 * 365 , $langs[5]),
+                    array( 60 * 24 * 30 , $langs[4]),
+                    array( 60 * 24 * 7, $langs[3]),
+                    array( 60 * 24 , $langs[2]),
+                    array( 60 , $langs[1]),
+                    array( 1 , $langs[0])
+                );
+
+                for ($i = 0; $i <= 5; $i ++ ){
+                    if ($value >= $chunks[$i][0]){
+
+                        $value = number_format($value / $chunks[$i][0], 0);
+                        $output = isset($template['prefix']) ? $template['prefix'] . ' ' : '';
+                        $output .= $value .' '. $chunks[$i][1]  . ' trước';
+
+                        break;
+                    }
+                }
+                break;
+
+            default:
+                break;
         }
-
-        // If 'j' is equal to 6, this means the item was added
-        // over a month ago. In this case, we simply want to
-        // display the month and the year.
-        if ($j < 6) {
-            // On the other hand, if the item is more recent, we use
-            // the code below to display the age of the item such as:
-            // '3 days ago' or '7 hours ago'
-            $difference = round($difference);
-
-            /*
-            if ($difference != 1) {
-                $periods[$j] .= 's';
-            }
-            */
-
-            $return = $difference . ' ' . $periods[$j] . ' trước';
-        } else {
-            $return = date('d-m-Y H:i', $timestamp);
-        }
-
-        return $return;
+        return $output;
     }
 
     public static function formatPhoneNumber($string)
@@ -620,5 +663,135 @@ class Util
         );
 
         return $string;
+    }
+
+    public static function randomCodeSms($count = 10)
+    {
+        $random = '';
+        $base = explode(' ', '0 1 2 3 4 5 6 7 8 9');
+
+        for ($i = 0; $i < $count; $i++) {
+            $random .= $base[mt_rand(0, 9)];
+        }
+        $random = trim($random);
+
+        return $random;
+    }
+
+    public static function curlGetPostJson($url, $post = array())
+    {
+        $url = trim($url);
+        if (is_array($post) && count($post)) {
+            $data = json_encode($post);
+        } else {
+            $data = $post;
+        }
+
+        $ch = curl_init($url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Content-Length: ' . strlen($data))
+        );
+
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        return $result;
+    }
+
+    public static function getTypeFile($ext) {
+
+        $mime_types = array(
+
+            'txt' => 'text',
+            'htm' => 'text',
+            'html' => 'text',
+            'php' => 'text',
+            'css' => 'text',
+            'js' => 'js',
+            'json' => 'js',
+            'xml' => 'xml',
+            'swf' => 'flash',
+            'flv' => 'video',
+
+            // images
+            'png' => 'image',
+            'jpe' => 'image',
+            'jpeg' => 'image',
+            'jpg' => 'image',
+            'gif' => 'image',
+            'bmp' => 'image',
+            'ico' => 'image',
+            'tiff' => 'image',
+            'tif' => 'image',
+            'svg' => 'image',
+            'svgz' => 'image',
+
+            // archives
+            'zip' => 'archives',
+            'rar' => 'archives',
+            'exe' => 'exe',
+            'msi' => 'msi',
+
+            // audio/video
+            'mp3' => 'audio',
+            'qt' => 'video',
+            'mov' => 'video',
+
+            // adobe
+            'pdf' => 'pdf',
+            'psd' => 'psd',
+            'ai' => 'ai',
+            'eps' => 'eps',
+            'ps' => 'ps',
+
+            // ms office
+            'doc' => 'doc',
+            'docx' => 'doc',
+            'pptx' => 'ppt',
+            'ppt' => 'ppt',
+            'xls' => 'excel',
+            'xlsx' => 'excel'
+        );
+        if (isset($mime_types[trim(strtolower($ext))])) {
+            return $mime_types[trim(strtolower($ext))];
+        } else {
+            return 'unknown';
+        }
+    }
+
+    public static function getMimeImage($type)
+    {
+        $args = array(
+            'image/png' => '.png',
+            'image/jpeg' => '.jpg',
+            'image/gif' => '.gif',
+            'image/bmp' => '.bmp',
+            'image/vnd.microsoft.icon' => '.ico',
+            'image/tiff' => '.tif',
+            'image/svg+xml' => '.svg',
+        );
+
+        if (isset($args[$type])) {
+            return $args[$type];
+        } else {
+            return '';
+        }
+    }
+
+    public static function recursiveRemove($dir) {
+        $structure = glob(rtrim($dir, "/").'/*');
+        if (is_array($structure)) {
+            foreach($structure as $file) {
+                if (is_dir($file)) self::recursiveRemove($file);
+                elseif (is_file($file)) unlink($file);
+            }
+        }
+        rmdir($dir);
     }
 }

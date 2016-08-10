@@ -1,5 +1,5 @@
 <?php
-namespace ITECH\Data\Lib;
+namespace MINI\Data\Lib;
 
 // +------------------------------------------------------------------------+
 // | class.upload.php                                                       |
@@ -812,6 +812,7 @@ class Upload
      * @public string
      */
     public $log;
+
 
     // overiddable processing publiciables
 
@@ -2785,7 +2786,7 @@ class Upload
                             finfo_close($f);
                             $this->file_src_mime = $mime;
                             $this->log .= '&nbsp;&nbsp;&nbsp;&nbsp;MIME type detected as ' . $this->file_src_mime . ' by Fileinfo PECL extension<br />';
-                            if (preg_match("/^([\.-\w]+)\/([\.-\w]+)(.*)$/i", $this->file_src_mime)) {
+                            if (preg_match('/^([\.-\w]+)\/([\.-\w]+)(.*)$/i', $this->file_src_mime)) {
                                 $this->file_src_mime = preg_replace("/^([\.-\w]+)\/([\.-\w]+)(.*)$/i", '$1/$2', $this->file_src_mime);
                                 $this->log .= '-&nbsp;MIME validated as ' . $this->file_src_mime . '<br />';
                             } else {
@@ -2825,7 +2826,7 @@ class Upload
                             if (strlen($mime = @exec("file -bi " . escapeshellarg($this->file_src_pathname))) != 0) {
                                 $this->file_src_mime = trim($mime);
                                 $this->log .= '&nbsp;&nbsp;&nbsp;&nbsp;MIME type detected as ' . $this->file_src_mime . ' by UNIX file() command<br />';
-                                if (preg_match("/^([\.-\w]+)\/([\.-\w]+)(.*)$/i", $this->file_src_mime)) {
+                                if (preg_match('/^([\.-\w]+)\/([\.-\w]+)(.*)$/i', $this->file_src_mime)) {
                                     $this->file_src_mime = preg_replace("/^([\.-\w]+)\/([\.-\w]+)(.*)$/i", '$1/$2', $this->file_src_mime);
                                     $this->log .= '-&nbsp;MIME validated as ' . $this->file_src_mime . '<br />';
                                 } else {
@@ -3654,6 +3655,7 @@ class Upload
                     @unlink($this->file_dst_path . $hash . (!empty($this->file_dst_name_ext) ? '.' . $this->file_dst_name_ext : ''));
                 }
 
+
                 // if we have an uploaded file, and if it is the first process, and if we can't access the file directly (open_basedir restriction)
                 // then we create a temp file that will be used as the source file in subsequent processes
                 // the third condition is there to check if the file is not accessible *directly* (it already has positively gone through is_uploaded_file(), so it exists)
@@ -3815,6 +3817,7 @@ class Upload
                         imagesavealpha($image_src, true);
                         $this->image_is_palette = false;
                     }
+
 
                     $image_dst = & $image_src;
 
