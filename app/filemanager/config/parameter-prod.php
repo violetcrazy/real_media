@@ -32,11 +32,11 @@ $parameters = array(
     'application' => array(
         'protocol' => 'http://',
         'pagination_limit' => '3',
-        'base_url' => 'http://localhost.cdn.land.com/',
+        'base_url' => 'http://cdnjinn.codex4u.com/',
         'token' => '363b122c528f54df4a0446b6bab05515', // j
         'token_user' => '93d68a20c24c803791b5fce92f51cfc3', // jinn
         'upload_dir' => ROOT . '/web/filemanager/uploads/',
-        'upload_url' => 'http://localhost.cdn.land.com/uploads/',
-        'allow_parent' => 'http://localhost.admin.land.com/'
+        'upload_url' => 'http://cdnjinn.codex4u.com/uploads/',
+        'allow_parent' => 'http://adminjinn.codex4u.com/'
     ),
 );

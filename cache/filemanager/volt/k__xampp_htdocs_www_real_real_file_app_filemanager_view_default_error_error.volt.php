@@ -21,7 +21,7 @@
 
         var config = {
             'upload_url' : '<?php echo $this->config->application->upload_url; ?>',
-            'asset_url' : '<?php echo $this->config->application->base_url; ?>asset/',
+            'asset_url' : '<?php echo $this->config->application->base_url; ?>asset/filemanager/',
             'allowParent' : '<?php echo $this->config->application->allow_parent; ?>'
         }
     </script>

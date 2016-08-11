@@ -140,23 +140,35 @@ $(document).ready(function(){
         }
         $('.footer-tool button').addClass('disabled').find('.selected-count').text('');
     })
-    .on('click', '.list-file .item', function (event) {
+    .on('click', '.list-file .item.file', function (event) {
         event.preventDefault();
         $this = $(this);
-        var data = $this.data();
 
         if (event.ctrlKey) {
-            selectedFile.push(data.meta);
+            if(!$this.hasClass('selected')) {
+                $this.addClass('selected');
+            } else {
+                $this.removeClass('selected');
+            }
+
         } else {
             $('.list-file .item').removeClass('selected');
-            while (selectedFile.length > 0) {
-                selectedFile.pop();
-            }
-            selectedFile.push(data.meta);
+            $this.addClass('selected');
         }
-        $this.addClass('selected');
 
-        $('.footer-tool button').removeClass('disabled').find('.selected-count').text('('+ selectedFile.length +')');
+        while (selectedFile.length > 0) {
+            selectedFile.pop();
+        }
+
+        $('.list-file').find('.selected').each(function(index, el){
+            var data = $(el).data();
+            selectedFile.push(data.meta);
+        });
+        if (selectedFile.length > 0) {
+            $('.footer-tool button').removeClass('disabled').find('.selected-count').text('('+ selectedFile.length +')');
+        } else {
+            $('.footer-tool button').addClass('disabled').find('.selected-count').text('');
+        }
     })
     .on('click', '.btn-rollback', function (event) {
         event.preventDefault();
