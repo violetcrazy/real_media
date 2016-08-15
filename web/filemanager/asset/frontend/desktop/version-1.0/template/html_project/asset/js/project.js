@@ -13,11 +13,10 @@ $document.ready(
             controlNav: false
         });
 
-
         $('.gallery-slide').flexslider({
             animation: "slide",
-            animationLoop: false,
-            itemWidth: 227,
+            animationLoop: true,
+            itemWidth:  $('.gallery-slide').width() / 4,
             itemMargin: 0,
             minItems: 4,
             maxItems: 4,
@@ -58,7 +57,6 @@ $document.ready(
                     var centerY = minY - 10;
                     html = '<span class="mark-map" id="'+ data_id +'">'+ title +'</span>';
                     $('.block-map').append(html);
-                    console.log($('#'+data_id).width() /2);
                     var left = centerX - ($('#'+data_id).outerWidth() /2),
                         top = centerY - $('#'+data_id).outerHeight();
 
@@ -125,7 +123,6 @@ $document.ready(
     e.preventDefault();
     var page = $(this).data('page');
     page = page + 1;
-    console.log('PAGE: ', page);
     if (load.sending == false) {
         load.sending = true;
         $.ajax({

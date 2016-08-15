@@ -37,6 +37,8 @@ $parameters = array(
         'token_user' => '93d68a20c24c803791b5fce92f51cfc3', // jinn
         'upload_dir' => ROOT . '/web/filemanager/uploads/',
         'upload_url' => 'http://cdnjinn.codex4u.com/uploads/',
-        'allow_parent' => 'http://adminjinn.codex4u.com/'
+        'allow_parent' => 'http://adminjinn.codex4u.com/',
+        'session_domain' => '.jinn.vn',
+        'session_name' => 'jinn',
     ),
 );

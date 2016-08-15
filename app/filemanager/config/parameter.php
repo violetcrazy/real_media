@@ -37,6 +37,8 @@ $parameters = array(
         'token_user' => '93d68a20c24c803791b5fce92f51cfc3', // jinn
         'upload_dir' => ROOT . '/web/filemanager/uploads/',
         'upload_url' => 'http://localhost.cdn.land.com/uploads/',
-        'allow_parent' => 'http://localhost.admin.land.com/'
+        'allow_parent' => 'http://localhost.admin.land.com/',
+        'session_domain' => '.land.com',
+        'session_name' => 'land',
     ),
 );

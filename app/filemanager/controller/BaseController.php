@@ -15,17 +15,8 @@ class BaseController extends Controller
         $relative = trim($relative, '/');
         $this->session->set('RELATIVE_PATH_CURRENT', $relative);
 
-        if (!$this->session->has('USER') && $this->dispatcher->getActionName() != 'login'){
-            $this->response->redirect(array(
-               'for' => 'login',
-                'query' => '?referrer=' . urlencode($this->config->application->base_url . '?' . http_build_query($this->request->getQuery()))
-            ));
-        }
-
-        if ($this->session->has('USER') && $this->dispatcher->getActionName() == 'login'){
-            $this->response->redirect(array(
-               'for' => 'index'
-            ));
+        if (!$this->session->has('USER')){
+            $this->response->redirect($this->config->application->allow_parent, true);
         }
     }
 

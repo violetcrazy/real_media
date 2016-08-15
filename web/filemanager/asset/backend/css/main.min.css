@@ -5512,3 +5512,6 @@ border: 2px solid red;
 	position: relative;
 	top: 2px;
 }
+.wrap-map > div {
+	background-size: 100% auto !important;
+}

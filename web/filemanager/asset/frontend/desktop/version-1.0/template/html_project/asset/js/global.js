@@ -110,26 +110,26 @@ $document.ready(function(){
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    $('img').each(function(){
-        $(this).on('error', function(){
-            var wP = $(this).parent().width();
-            var src = '';
-            $(this).attr('data-wp', wP);
-            // if(wP == 0 || wP < 0) {
-            //     src = default_image;
-            // } else if(wP < 51) {
-            //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage50.jpg';
-            // } else if (wP < 101){
-            //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage100.jpg';
-            // } else if (wP == 501){
-            //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage500.jpg';
-            // } else {
-            //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage.jpg';
-            // }
-            src = default_image;
-            $(this).attr('src', src);
-        })
-    })
+    // $('img').each(function(){
+    //     $(this).on('error', function(){
+    //         var wP = $(this).parent().width();
+    //         var src = '';
+    //         $(this).attr('data-wp', wP);
+    //         // if(wP == 0 || wP < 0) {
+    //         //     src = default_image;
+    //         // } else if(wP < 51) {
+    //         //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage50.jpg';
+    //         // } else if (wP < 101){
+    //         //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage100.jpg';
+    //         // } else if (wP == 501){
+    //         //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage500.jpg';
+    //         // } else {
+    //         //     src = 'http://cdn.jinn.vn/asset/frontend/img/noimage.jpg';
+    //         // }
+    //         src = default_image;
+    //         $(this).attr('src', src);
+    //     })
+    // })
 });
 
 
