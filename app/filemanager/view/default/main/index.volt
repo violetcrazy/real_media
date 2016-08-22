@@ -10,10 +10,6 @@
             <div class="wrap-list">
                 <ul></ul>
             </div>
-            <hr>
-            <div>
-                <a class="logout" href="{{ url({'for': 'logout'}) }}">Đăng xuất</a>
-            </div>
         </div>
         <div class="main-content">
 

@@ -12875,3 +12875,8 @@ h4, .h4 {
 .icon-new.icon-over {
   background-image: url(../img/overview.png);
 }
+
+.tool-view a {
+  font-size: 14px;
+  text-transform: none;
+}
