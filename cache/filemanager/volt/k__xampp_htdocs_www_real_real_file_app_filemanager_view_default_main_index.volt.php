@@ -42,10 +42,6 @@
             <div class="wrap-list">
                 <ul></ul>
             </div>
-            <hr>
-            <div>
-                <a class="logout" href="<?php echo $this->url->get(array('for' => 'logout')); ?>">Đăng xuất</a>
-            </div>
         </div>
         <div class="main-content">
 
@@ -64,10 +60,12 @@
             <div class="list-file">
             </div>
 
-            <div class="footer-tool text-right">
-                <button data-callback="<?php echo ($this->request->getQuery('callback') ? $this->request->getQuery('callback') : 'getFileFromFileManager'); ?>"  data-inputReceive="<?php echo ($this->request->getQuery('input-receive') ? $this->request->getQuery('input-receive') : 'false'); ?>" class="btn btn-success disabled" id="send-to-parent">Sử dụng <span class="selected-count"></span></button>
-                <button class="btn btn-default disabled" id="cancel-selected">Hủy chọn <span class="selected-count"></span></button>
-            </div>
+            <?php if ($this->request->hasQuery('callback') && $this->request->getQuery('callback') != 'undefined') { ?>
+                <div class="footer-tool text-right">
+                    <button data-callback="<?php echo ($this->request->getQuery('callback') ? $this->request->getQuery('callback') : 'getFileFromFileManager'); ?>"  data-inputReceive="<?php echo ($this->request->getQuery('input-receive') ? $this->request->getQuery('input-receive') : 'false'); ?>" class="btn btn-success disabled" id="send-to-parent">Sử dụng <span class="selected-count"></span></button>
+                    <button class="btn btn-default disabled" id="cancel-selected">Hủy chọn <span class="selected-count"></span></button>
+                </div>
+            <?php } ?>
 
         </div>
     </div>

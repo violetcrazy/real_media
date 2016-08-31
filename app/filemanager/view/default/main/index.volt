@@ -28,10 +28,12 @@
             <div class="list-file">
             </div>
 
-            <div class="footer-tool text-right">
-                <button data-callback="{{ request.getQuery('callback') ? request.getQuery('callback') : 'getFileFromFileManager' }}"  data-inputReceive="{{ request.getQuery('input-receive') ? request.getQuery('input-receive') : 'false' }}" class="btn btn-success disabled" id="send-to-parent">Sử dụng <span class="selected-count"></span></button>
-                <button class="btn btn-default disabled" id="cancel-selected">Hủy chọn <span class="selected-count"></span></button>
-            </div>
+            {% if request.hasQuery('callback') and request.getQuery('callback') != 'undefined' %}
+                <div class="footer-tool text-right">
+                    <button data-callback="{{ request.getQuery('callback') ? request.getQuery('callback') : 'getFileFromFileManager' }}"  data-inputReceive="{{ request.getQuery('input-receive') ? request.getQuery('input-receive') : 'false' }}" class="btn btn-success disabled" id="send-to-parent">Sử dụng <span class="selected-count"></span></button>
+                    <button class="btn btn-default disabled" id="cancel-selected">Hủy chọn <span class="selected-count"></span></button>
+                </div>
+            {% endif %}
 
         </div>
     </div>
