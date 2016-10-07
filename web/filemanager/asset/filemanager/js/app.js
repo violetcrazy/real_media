@@ -329,6 +329,9 @@ function buildTreeView(data, path) {
 }
 
 function buildItemFile(data) {
+    var d = new Date();
+    var n = d.getTime();
+
     var html = '';
     var img = '';
     if (data.metadata.type == 'dir') {
@@ -340,7 +343,7 @@ function buildItemFile(data) {
     }
     html += '<div class="item '+ data.metadata.type +'" data-meta=\''+ JSON.stringify(data.metadata) +'\'>' +
         '<div class="wrap-thumb">' +
-        '<img src="'+ img +'" alt="">' +
+        '<img src="'+ img +'?ver='+ n +'" alt="">' +
         '<div class="tool">' +
         '<a href="" class="change-active"></a>' +
         '<a href="" class="delete-action"></a>' +
