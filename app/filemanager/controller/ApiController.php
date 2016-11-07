@@ -133,7 +133,7 @@ class ApiController extends BaseController
                 ));
             }
 
-            $checkMk = @mkdir($this->session->get('PATH_CURRENT') . $dirName);
+            $checkMk = @mkdir($this->session->get('PATH_CURRENT') . $dirName, 0777);
             if ($checkMk) {
                 parent::outputJSON(array(
                     'status' => \MINI\Data\Lib\Constant::STATUS_CODE_SUCCESS,

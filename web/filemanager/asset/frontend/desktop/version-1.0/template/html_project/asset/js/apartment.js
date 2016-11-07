@@ -29,7 +29,7 @@ $document
 
         $('#slider').flexslider({
             animation: "slide",
-            controlNav: false,
+            controlNav: true,
             animationLoop: false,
             slideshow: false,
             sync: "#carousel",

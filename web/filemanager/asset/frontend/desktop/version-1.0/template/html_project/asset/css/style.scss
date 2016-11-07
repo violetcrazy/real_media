@@ -1033,6 +1033,7 @@ b{
     position: relative;
     .map {
         background-size: 100% auto !important;
+        max-width: 100%;
     }
     .mark-map{
         position: absolute;
@@ -4095,4 +4096,8 @@ form{
             left: 235px;
         }
     }
+}
+
+.f16 {
+    font-size: 16px !important;
 }

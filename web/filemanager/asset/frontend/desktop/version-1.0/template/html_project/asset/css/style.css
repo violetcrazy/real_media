@@ -9233,6 +9233,7 @@ b {
 
 .block-map .map {
   background-size: 100% auto !important;
+  max-width: 100%;
 }
 
 .block-map .mark-map {
@@ -13068,6 +13069,10 @@ h4, .h4 {
   font-weight: 600;
   bottom: 0;
   left: 235px;
+}
+
+.f16 {
+  font-size: 16px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
