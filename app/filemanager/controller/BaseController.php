@@ -16,7 +16,7 @@ class BaseController extends Controller
         $this->session->set('RELATIVE_PATH_CURRENT', $relative);
 
         if (!$this->session->has('USER')){
-            $this->response->redirect($this->config->application->allow_parent, true);
+            $this->response->redirect($this->config->application->allow_parent . '?referral_url=' . $this->config->application->base_url , true);
         }
     }
 

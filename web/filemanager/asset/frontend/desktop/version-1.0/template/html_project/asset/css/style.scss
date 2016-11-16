@@ -2028,7 +2028,6 @@ img{
     font-size: 14px;
     border: 1px solid #d7d7d7;
     display: none;
-    bottom: 0px;
     .title{
         background-color: $color_title_red;
         color: #fff;
@@ -4100,4 +4099,18 @@ form{
 
 .f16 {
     font-size: 16px !important;
+}
+
+.block-policy {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin: auto -10px 0px;
+    overflow: auto;
+    .title-policy {
+        color: #a71a27;
+        margin-top: auto;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
